@@ -47,12 +47,8 @@ export default function ProductDetail() {
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
 
                         {/* Image */}
-                        <div className="detail-img-frame">
-                            <div className="img-placeholder" style={{ height: '340px' }}>
-                                <MdPhotoCamera size={52} />
-                                <span>Product Image</span>
-                                <small style={{ color: 'rgba(46,204,113,0.4)', fontSize: '11px' }}>Add image to /public/images/{product.id}.jpg</small>
-                            </div>
+                        <div className="detail-img-frame" style={{ background: '#f5f5f5', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <img src={product.image} alt={product.name} style={{ width: '100%', maxHeight: '450px', objectFit: 'contain' }} />
                         </div>
 
                         {/* Info */}
@@ -91,8 +87,8 @@ export default function ProductDetail() {
                             <div className="related-grid">
                                 {series.products.filter(p => p.id !== productId).map(p => (
                                     <Link key={p.id} to={`/products/${series.slug}/${p.id}`} className="related-card">
-                                        <div className="img-placeholder" style={{ height: '100px' }}>
-                                            <MdPhotoCamera size={20} />
+                                        <div className="related-card-img" style={{ height: '100px', background: 'white', borderRadius: '8px', overflow: 'hidden', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                            <img src={p.image} alt={p.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                                         </div>
                                         <p className="related-card-name">{p.name}</p>
                                     </Link>

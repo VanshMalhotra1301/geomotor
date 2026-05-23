@@ -1,3 +1,11 @@
+import commercialMotorImg from './commercial_motor.png';
+import industrialMotorImg from './industrial_motor_and_tent.png';
+import exhaustFanImg from './exhaust_fan_996.png';
+import miniTankImg from './mini_tank_water_pump.png';
+import metalBladeImg from './metal_blade.png';
+import chimneyMotorImg from './chimney_motor.png';
+import hFrameCapconImg from './h_frame_capcon.png';
+
 export const productSeries = [
     {
         id: "commercial-cooler-motor",
@@ -5,7 +13,7 @@ export const productSeries = [
         slug: "commercial-cooler-motor-series",
         shortDesc: "ISI-registered cooler motors for commercial applications — 12W, 18W, 92W & 152W, H-Frame and E-Frame variants.",
         description: "The GEO Commercial Cooler Motor Series offers ISI-certified motors engineered for reliability and performance. India's first manufacturer of H Frame Capcan Cooler Motor — trusted by OEMs across the country.",
-        image: "/images/commercial-cooler-motor.jpg",
+        image: commercialMotorImg,
         products: [
             {
                 id: "h-frame-capcan",
@@ -22,7 +30,7 @@ export const productSeries = [
                     { label: "Certification", value: "ISI — IS:996-2009" },
                     { label: "Rotation", value: "CW / ACW" },
                 ],
-                image: "/images/h-frame-capcan.jpg",
+                image: hFrameCapconImg,
             },
             {
                 id: "h-frame-metal-shell",
@@ -37,7 +45,7 @@ export const productSeries = [
                     { label: "Bearing", value: "Bush / Ball" },
                     { label: "Certification", value: "ISI Registered" },
                 ],
-                image: "/images/h-frame-metal-shell.jpg",
+                image: commercialMotorImg,
             },
             {
                 id: "e-frame-metal-shell",
@@ -51,7 +59,7 @@ export const productSeries = [
                     { label: "Speed", value: "Single / Double / Triple" },
                     { label: "Certification", value: "ISI Registered" },
                 ],
-                image: "/images/e-frame-metal-shell.jpg",
+                image: commercialMotorImg,
             },
         ],
     },
@@ -61,7 +69,7 @@ export const productSeries = [
         slug: "industrial-cooler-tent-cooler-motor-series",
         shortDesc: "Heavy-duty aluminium shell motors for industrial and tent cooler applications — 24\" and 30\" configurations.",
         description: "Engineered for industrial-grade performance, this series features rugged aluminium shell construction. Powers large-scale cooling in factories, industrial sheds, and tent events with unmatched reliability.",
-        image: "/images/industrial-cooler-motor.jpg",
+        image: industrialMotorImg,
         products: [
             {
                 id: "24-inch-aluminium",
@@ -75,7 +83,7 @@ export const productSeries = [
                     { label: "RPM", value: "1400 / 2800" },
                     { label: "Bearing", value: "Ball Bearing" },
                 ],
-                image: "/images/24-inch-aluminium.jpg",
+                image: industrialMotorImg,
             },
             {
                 id: "30-inch-aluminium",
@@ -89,7 +97,7 @@ export const productSeries = [
                     { label: "RPM", value: "1400" },
                     { label: "Bearing", value: "Ball Bearing" },
                 ],
-                image: "/images/30-inch-aluminium.jpg",
+                image: industrialMotorImg,
             },
         ],
     },
@@ -99,7 +107,7 @@ export const productSeries = [
         slug: "exhaust-fan-996-model-series",
         shortDesc: "Complete exhaust fan motor solutions with blade accessories and mounting legs — 15 to 24 inch configurations.",
         description: "The GEO Exhaust Fan 996 Model series delivers complete motor solutions for exhaust fan installations conforming to IS:996-2009. Available from 15 to 24 inches with matching blade accessories and sturdy leg mounts.",
-        image: "/images/exhaust-fan-996.jpg",
+        image: exhaustFanImg,
         products: [
             {
                 id: "15-24-exhaust-fan",
@@ -113,7 +121,7 @@ export const productSeries = [
                     { label: "RPM", value: "1400 / 2800" },
                     { label: "Accessories", value: "Blades & Legs Included" },
                 ],
-                image: "/images/exhaust-fan-996-model.jpg",
+                image: exhaustFanImg,
             },
         ],
     },
@@ -123,7 +131,7 @@ export const productSeries = [
         slug: "mini-tank-water-pump-series",
         shortDesc: "Compact high-speed water pump motors for mini tank cooler applications — engineered for GEO OEM requirements.",
         description: "The GEO Mini Tank Water Pump Series delivers efficient water circulation for cooler systems. Our high-speed variant ensures consistent flow, enhancing cooler performance in residential and commercial settings.",
-        image: "/images/mini-tank-water-pump.jpg",
+        image: miniTankImg,
         products: [
             {
                 id: "high-speed-motor",
@@ -136,7 +144,7 @@ export const productSeries = [
                     { label: "RPM", value: "2400 / 2800" },
                     { label: "Build", value: "GEO OEM Grade" },
                 ],
-                image: "/images/high-speed-motor.jpg",
+                image: miniTankImg,
             },
         ],
     },
@@ -146,14 +154,14 @@ export const productSeries = [
         slug: "metal-blade-and-legs-series",
         shortDesc: "Precision metal cooler blades and arms — 17.5/113 to 30 inch — paired with full GEO motor range.",
         description: "GEO manufactures premium metal cooler blades and leg accessories engineered for maximum airflow efficiency and structural strength. Multiple diameter and bore configurations to pair with our complete motor range.",
-        image: "/images/metal-blade-legs.jpg",
+        image: metalBladeImg,
         products: [
-            { id: "17-5-113", name: "17.5/113 Metal Blade", desc: "17.5-inch metal blade with 113mm bore — precision-balanced for vibration-free operation and maximum CFM.", specs: [{ label: "Diameter", value: "17.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: "/images/17-5-metal-blade.jpg" },
-            { id: "18-5-113", name: "18.5/113 Metal Blade", desc: "18.5-inch blade with 113mm bore — ideal for medium-capacity commercial coolers requiring strong airflow.", specs: [{ label: "Diameter", value: "18.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: "/images/18-5-metal-blade.jpg" },
-            { id: "19-5-113", name: "19.5/113 Metal Blade", desc: "19.5-inch blade with 113mm bore for high-airflow commercial cooler applications.", specs: [{ label: "Diameter", value: "19.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: "/images/19-5-metal-blade.jpg" },
-            { id: "24-metal-blade", name: "24 inch Metal Blade", desc: "Heavy-duty 24-inch metal blade for industrial coolers and tent cooler applications.", specs: [{ label: "Diameter", value: "24 inch" }, { label: "Application", value: "Industrial / Tent" }], image: "/images/24-metal-blade.jpg" },
-            { id: "30-metal-blade", name: "30 inch Metal Blade", desc: "Industrial-scale 30-inch metal blade for heavy-duty cooling systems.", specs: [{ label: "Diameter", value: "30 inch" }, { label: "Application", value: "Industrial" }], image: "/images/30-metal-blade.jpg" },
-            { id: "15-metal-blade", name: "15 Metal Blade", desc: "Compact 15-inch metal blade for smaller-capacity cooler systems, built to GEO quality standards.", specs: [{ label: "Diameter", value: "15 inch" }], image: "/images/15-metal-blade.jpg" },
+            { id: "17-5-113", name: "17.5/113 Metal Blade", desc: "17.5-inch metal blade with 113mm bore — precision-balanced for vibration-free operation and maximum CFM.", specs: [{ label: "Diameter", value: "17.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: metalBladeImg },
+            { id: "18-5-113", name: "18.5/113 Metal Blade", desc: "18.5-inch blade with 113mm bore — ideal for medium-capacity commercial coolers requiring strong airflow.", specs: [{ label: "Diameter", value: "18.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: metalBladeImg },
+            { id: "19-5-113", name: "19.5/113 Metal Blade", desc: "19.5-inch blade with 113mm bore for high-airflow commercial cooler applications.", specs: [{ label: "Diameter", value: "19.5 inch" }, { label: "Bore", value: "113mm" }, { label: "Material", value: "Metal" }], image: metalBladeImg },
+            { id: "24-metal-blade", name: "24 inch Metal Blade", desc: "Heavy-duty 24-inch metal blade for industrial coolers and tent cooler applications.", specs: [{ label: "Diameter", value: "24 inch" }, { label: "Application", value: "Industrial / Tent" }], image: metalBladeImg },
+            { id: "30-metal-blade", name: "30 inch Metal Blade", desc: "Industrial-scale 30-inch metal blade for heavy-duty cooling systems.", specs: [{ label: "Diameter", value: "30 inch" }, { label: "Application", value: "Industrial" }], image: metalBladeImg },
+            { id: "15-metal-blade", name: "15 Metal Blade", desc: "Compact 15-inch metal blade for smaller-capacity cooler systems, built to GEO quality standards.", specs: [{ label: "Diameter", value: "15 inch" }], image: metalBladeImg },
         ],
     },
     {
@@ -162,7 +170,7 @@ export const productSeries = [
         slug: "chimney-motor-series",
         shortDesc: "High-performance 230V 50Hz 152W chimney motors engineered for kitchen and industrial chimney applications.",
         description: "The GEO Chimney Motor Series delivers powerful suction, quiet operation, and exceptional longevity for kitchen and industrial chimney systems.",
-        image: "/images/chimney-motor.jpg",
+        image: chimneyMotorImg,
         products: [
             {
                 id: "chimney-152w",
@@ -176,7 +184,7 @@ export const productSeries = [
                     { label: "Bearing", value: "Ball Bearing" },
                     { label: "Winding", value: "Copper" },
                 ],
-                image: "/images/chimney-152w.jpg",
+                image: chimneyMotorImg,
             },
         ],
     },

@@ -7,11 +7,8 @@ export default function ProductCard({ series, product, layout = 'series' }) {
     if (layout === 'series') {
         return (
             <Link to={`/products/${series.slug}`} className="pcard">
-                <div className="pcard-img" style={{ height: 220 }}>
-                    <div className="img-placeholder" style={{ height: '100%' }}>
-                        <MdPhotoCamera size={36} />
-                        <span>Image Coming Soon</span>
-                    </div>
+                <div className="pcard-img" style={{ height: 260, padding: '24px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                    <img src={series.image} alt={series.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                 </div>
                 <div className="pcard-body">
                     <h3 className="pcard-name">{series.name}</h3>
@@ -28,11 +25,8 @@ export default function ProductCard({ series, product, layout = 'series' }) {
     // product layout
     return (
         <Link to={`/products/${series.slug}/${product.id}`} className="pcard pcard-product">
-            <div className="pcard-img" style={{ height: 200 }}>
-                <div className="img-placeholder" style={{ height: '100%' }}>
-                    <MdPhotoCamera size={32} />
-                    <span>Image Coming Soon</span>
-                </div>
+            <div className="pcard-img" style={{ height: 220, padding: '20px', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                <img src={product.image || series.image} alt={product.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
             </div>
             <div className="pcard-body">
                 <h3 className="pcard-name pcard-name-sm">{product.name}</h3>
