@@ -4,6 +4,7 @@ import { FiArrowRight, FiArrowUpRight, FiPhone, FiMail, FiAward, FiCheckCircle }
 import { MdPhotoCamera, MdFactory } from 'react-icons/md'
 import { productSeries, companyInfo } from '../data/products'
 import ProductCard from '../components/ProductCard'
+import mainImg from '../data/main.png'
 import './Home.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
@@ -58,10 +59,7 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         <div className="hero-img-frame">
-                            <div className="img-placeholder" style={{ height: '380px' }}>
-                                <MdPhotoCamera size={48} />
-                                <span>Hero / Product Showcase Image</span>
-                            </div>
+                            <img src={mainImg} alt="GEO Motor India Products" style={{ width: '100%', height: '380px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
                             <div className="hero-img-badge">GEO® Since 1995</div>
                         </div>
                     </motion.div>

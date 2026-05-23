@@ -5,6 +5,7 @@ import {
     FaChevronDown, FaBars, FaTimes
 } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
+import logoImg from '../data/image.png'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -58,9 +59,7 @@ export default function Navbar() {
             <div className="navbar-main">
                 <div className="container navbar-inner">
                     <Link to="/" className="navbar-logo">
-                        <div className="logo-mark">
-                            <span className="logo-g">G</span><span className="logo-e">E</span><span className="logo-o">O</span><sup>®</sup>
-                        </div>
+                        <img src={logoImg} alt="Geo Motor India Logo" style={{ height: '45px', objectFit: 'contain' }} />
                         <div className="logo-text">
                             <span className="logo-company">Geo Motor India</span>
                             <span className="logo-tagline">{companyInfo.tagline}</span>
