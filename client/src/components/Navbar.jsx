@@ -98,6 +98,7 @@ export default function Navbar() {
 
                         <NavLink to="/oem-solutions" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>OEM</NavLink>
                         <NavLink to="/certifications" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Certificates</NavLink>
+                        <NavLink to="/dealers" className={({ isActive }) => isActive ? 'nav-link active nav-link-highlight' : 'nav-link nav-link-highlight'}>Dealers</NavLink>
                         <NavLink to="/faq" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>FAQ</NavLink>
                         <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
                     </nav>
@@ -125,6 +126,7 @@ export default function Navbar() {
                     <div className="mobile-products-label">Company</div>
                     <NavLink to="/oem-solutions" onClick={() => setMobileOpen(false)} className="mobile-link">OEM Solutions</NavLink>
                     <NavLink to="/certifications" onClick={() => setMobileOpen(false)} className="mobile-link">Certifications</NavLink>
+                    <NavLink to="/dealers" onClick={() => setMobileOpen(false)} className="mobile-link">Dealer Program</NavLink>
                     <NavLink to="/faq" onClick={() => setMobileOpen(false)} className="mobile-link">FAQ</NavLink>
                     <NavLink to="/contact" onClick={() => setMobileOpen(false)} className="mobile-link">Contact Us</NavLink>
                     <Link to="/contact" onClick={() => setMobileOpen(false)} className="btn btn-primary" style={{ margin: '16px 20px', alignSelf: 'flex-start' }}>Enquire Now</Link>

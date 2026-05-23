@@ -71,6 +71,44 @@
     color: var(--green);
 }
 
+.whatsapp-cta-link {
+    color: #25d366 !important;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.whatsapp-cta-link:hover {
+    text-decoration: underline;
+}
+
+/* Enquiry Types */
+.contact-enquiry-types {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.cet-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.cet-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.cet-item:last-child {
+    border-bottom: none;
+}
+
+
 /* Form Card */
 .contact-form-card {
     background: var(--card-bg);

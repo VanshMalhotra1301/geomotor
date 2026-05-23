@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import OEM from './pages/OEM'
 import Certifications from './pages/Certifications'
 import FAQ from './pages/FAQ'
+import Dealers from './pages/Dealers'
 import './App.css'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <div className="app">
         <Navbar />
         <main className="main-content">
-          <Routes>
+            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
@@ -27,6 +28,7 @@ function App() {
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/dealers" element={<Dealers />} />
           </Routes>
         </main>
         <Footer />

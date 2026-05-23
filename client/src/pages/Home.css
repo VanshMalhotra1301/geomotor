@@ -110,6 +110,21 @@
     border-radius: 100px;
 }
 
+.hero-img-badge-2 {
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    background: var(--dark-3);
+    color: var(--green);
+    border: 1px solid rgba(46,204,113,0.35);
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 11px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+}
+
 /* Stats Bar */
 .hero-stats {
     background: var(--dark-2);
@@ -229,6 +244,14 @@
     position: relative;
 }
 
+/* 8-card Why GEO grid */
+.why-grid-8 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
 .why-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -240,6 +263,7 @@
 .why-card:hover {
     border-color: rgba(46, 204, 113, 0.3);
     transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
 }
 
 .why-icon {
@@ -255,16 +279,208 @@
     margin-bottom: 16px;
 }
 
+.why-icon-emoji {
+    font-size: 32px;
+    margin-bottom: 14px;
+    display: block;
+    line-height: 1;
+}
+
 .why-title {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--white);
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .why-desc {
     font-size: 13px;
     color: var(--text-muted);
+    line-height: 1.65;
+}
+
+/* ── Manufacturing Section ── */
+.manufacturing-section {
+    position: relative;
+    background: var(--dark-2);
+}
+
+.mfg-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(46, 204, 113, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, rgba(46, 204, 113, 0.04) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.mfg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+}
+
+.mfg-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mfg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.mfg-card:hover {
+    border-color: rgba(46, 204, 113, 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+.mfg-card:hover::before {
+    opacity: 1;
+}
+
+.mfg-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+    line-height: 1;
+}
+
+.mfg-title {
+    font-size: 17px;
+    color: var(--white);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.mfg-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ── Industries Section ── */
+.industries-section {
+    background: var(--dark);
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.industry-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.industry-card:hover {
+    border-color: rgba(46, 204, 113, 0.35);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+.industry-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.industry-name {
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.industry-desc {
+    font-size: 13px;
+    color: var(--text-muted);
     line-height: 1.6;
+}
+
+/* ── Dealer Strip ── */
+.dealer-strip {
+    background: linear-gradient(135deg, #071a0e 0%, #0d1f0f 50%, #0a1510 100%);
+    border-top: 1px solid rgba(46, 204, 113, 0.2);
+    border-bottom: 1px solid rgba(46, 204, 113, 0.2);
+    padding: 56px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.dealer-strip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(46, 204, 113, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.dealer-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.dealer-strip-icon {
+    font-size: 52px;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.dealer-strip-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.dealer-strip-text h2 {
+    font-size: clamp(20px, 2.8vw, 30px);
+    color: var(--white);
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.dealer-strip-text h2 span {
+    color: var(--green);
+}
+
+.dealer-strip-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.dealer-strip-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 /* CTA Strip */
@@ -306,11 +522,20 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .why-grid {
+    .why-grid,
+    .why-grid-8 {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mfg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .industries-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -332,13 +557,31 @@
         grid-template-columns: 1fr;
     }
 
-    .why-grid {
+    .why-grid,
+    .why-grid-8 {
+        grid-template-columns: 1fr;
+    }
+
+    .mfg-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industries-grid {
         grid-template-columns: 1fr;
     }
 
     .cta-inner {
         flex-direction: column;
         text-align: center;
+    }
+
+    .dealer-strip-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dealer-strip-icon {
+        font-size: 40px;
     }
 }
 

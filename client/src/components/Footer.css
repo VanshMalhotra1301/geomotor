@@ -41,14 +41,65 @@
     font-style: italic;
     color: var(--green);
     font-size: 13px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+}
+
+.footer-usp {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(46,204,113,0.7);
+    text-transform: uppercase;
+    margin-bottom: 14px;
 }
 
 .footer-about {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* Certification Badges */
+.footer-cert-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     margin-bottom: 20px;
+}
+
+.footer-cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(46,204,113,0.08);
+    border: 1px solid rgba(46,204,113,0.2);
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--green);
+    font-family: var(--font-head);
+}
+
+/* Dealer CTA */
+.footer-dealer-cta {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background: rgba(46,204,113,0.1);
+    border: 1px solid rgba(46,204,113,0.3);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+    font-family: var(--font-head);
+    transition: var(--transition);
+}
+
+.footer-dealer-cta:hover {
+    background: var(--green);
+    color: var(--dark);
 }
 
 .footer-socials {

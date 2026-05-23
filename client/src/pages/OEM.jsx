@@ -16,7 +16,7 @@ export default function OEM() {
                 <div className="container">
                     <div className="page-banner-breadcrumb"><Link to="/">Home</Link> / <span>OEM Solutions</span></div>
                     <h1>OEM <span>SOLUTIONS</span></h1>
-                    <p className="page-banner-sub">Custom Motor Engineering · Bulk Production · Pan India Supply</p>
+                    <p className="page-banner-sub">Custom Motor Engineering · ISI-Certified Supply · Bulk Production · Pan India Delivery</p>
                 </div>
             </div>
 
@@ -28,6 +28,38 @@ export default function OEM() {
                         <motion.h2 variants={fadeUp} className="section-title">Your <span>Engineering Partner</span></motion.h2>
                         <motion.p variants={fadeUp} className="oem-intro-text">{companyInfo.oem.intro}</motion.p>
                     </motion.section>
+
+                    {/* Why Partner With GEO */}
+                    <section className="oem-why-partner">
+                        <h3 className="oem-section-head">Why Partner With GEO®?</h3>
+                        <div className="oem-why-grid">
+                            {companyInfo.oem.whyPartner.map((item, i) => (
+                                <motion.div key={item.title} className="oem-why-card"
+                                    initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.1 }} viewport={{ once: true }}>
+                                    <FiCheckCircle className="oem-why-icon" />
+                                    <div>
+                                        <h4>{item.title}</h4>
+                                        <p>{item.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Industries Served */}
+                    <section className="oem-industries">
+                        <h3 className="oem-section-head">Industries We Serve</h3>
+                        <div className="oem-industries-list">
+                            {companyInfo.oem.industriesServed.map((ind, i) => (
+                                <motion.div key={ind} className="oem-industry-pill"
+                                    initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: i * 0.08 }} viewport={{ once: true }}>
+                                    {ind}
+                                </motion.div>
+                            ))}
+                        </div>
+                    </section>
 
                     {/* Capabilities Grid */}
                     <section className="oem-capabilities">
@@ -63,15 +95,24 @@ export default function OEM() {
                         </div>
                     </section>
 
+                    {/* Minimum Order Info */}
+                    <section className="oem-moq-block">
+                        <div className="oem-moq-icon">📦</div>
+                        <div>
+                            <h3>Bulk Production Capability</h3>
+                            <p>Our automated T-200 winding plant and stamping lines support production runs of <strong style={{ color: 'var(--green)' }}>10,000+ units</strong> per order with consistent quality at every unit. We work with OEM partners on production planning to ensure on-time delivery for peak cooling season demand.</p>
+                        </div>
+                    </section>
+
                     {/* CTA */}
                     <div className="oem-cta-bar">
                         <div>
                             <h3>Ready to Start Your OEM Project?</h3>
-                            <p>Talk to our engineering team — no obligation consultation.</p>
+                            <p>Talk to our engineering team — share your motor specifications and we'll provide a customized solution within 48 hours.</p>
                         </div>
                         <div className="oem-cta-actions">
-                            <a href={`tel:${companyInfo.phone}`} className="btn btn-primary"><FiPhone /> {companyInfo.phone}</a>
-                            <a href={`mailto:${companyInfo.email}`} className="btn btn-outline"><FiMail /> Email Us</a>
+                            <a href={`tel:${companyInfo.phone}`} className="btn btn-primary" id="oem-call-btn"><FiPhone /> {companyInfo.phone}</a>
+                            <a href={`mailto:${companyInfo.email}`} className="btn btn-outline" id="oem-email-btn"><FiMail /> Email Us</a>
                         </div>
                     </div>
                 </main>

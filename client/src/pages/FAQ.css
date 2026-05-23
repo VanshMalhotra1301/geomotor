@@ -66,12 +66,29 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
 }
 
-.faq-cta p {
-    color: var(--text-muted);
+.faq-cta-text h3 {
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 10px;
+    font-weight: 700;
 }
+
+.faq-cta-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.faq-cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

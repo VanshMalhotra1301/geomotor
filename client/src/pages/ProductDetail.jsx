@@ -1,8 +1,7 @@
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FiArrowLeft } from 'react-icons/fi'
-import { MdPhotoCamera } from 'react-icons/md'
-import { productSeries } from '../data/products'
+import { FiArrowLeft, FiCheckCircle, FiArrowRight, FiPhone } from 'react-icons/fi'
+import { productSeries, companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
 import './ProductDetail.css'
 
@@ -39,7 +38,7 @@ export default function ProductDetail() {
 
             <div className="container detail-layout">
                 <main className="detail-main">
-                    <button className="back-btn" onClick={() => navigate(-1)}>
+                    <button className="back-btn" onClick={() => navigate(-1)} id="detail-back-btn">
                         <FiArrowLeft /> Back
                     </button>
 
@@ -48,7 +47,7 @@ export default function ProductDetail() {
 
                         {/* Image */}
                         <div className="detail-img-frame" style={{ background: '#f5f5f5', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <img src={product.image} alt={product.name} style={{ width: '100%', maxHeight: '450px', objectFit: 'contain' }} />
+                            <img src={product.image} alt={`GEO ${product.name} — ${series.name}`} style={{ width: '100%', maxHeight: '450px', objectFit: 'contain' }} />
                         </div>
 
                         {/* Info */}
@@ -57,9 +56,18 @@ export default function ProductDetail() {
                             <h2 className="detail-product-name">{product.name}</h2>
                             <p className="detail-desc">{product.desc}</p>
 
+                            {/* Why Choose */}
+                            {product.whyChoose && (
+                                <div className="detail-why-choose">
+                                    <h4 className="detail-why-title">Why Choose This Motor?</h4>
+                                    <p className="detail-why-text">{product.whyChoose}</p>
+                                </div>
+                            )}
+
+                            {/* Specs Table */}
                             {product.specs && product.specs.length > 0 && (
                                 <div className="specs-table">
-                                    <h4 className="specs-title">Specifications</h4>
+                                    <h4 className="specs-title">Technical Specifications</h4>
                                     <table>
                                         <tbody>
                                             {product.specs.map(spec => (
@@ -70,15 +78,61 @@ export default function ProductDetail() {
                                             ))}
                                         </tbody>
                                     </table>
+                                    {product.warranty && (
+                                        <div className="detail-warranty-badge">🛡️ Warranty: {product.warranty}</div>
+                                    )}
                                 </div>
                             )}
 
+                            {/* Dual CTA */}
                             <div className="detail-actions">
-                                <Link to="/contact" className="btn btn-primary">Enquire About This Product</Link>
-                                <Link to="/products" className="btn btn-dark">View All Products</Link>
+                                <Link to="/contact" className="btn btn-primary" id="detail-enquire-btn">
+                                    Request a Quote <FiArrowRight />
+                                </Link>
+                                <Link to="/dealers" className="btn btn-outline" id="detail-dealer-btn">
+                                    Become a Dealer
+                                </Link>
+                                <Link to="/products" className="btn btn-dark" id="detail-back-products-btn">
+                                    View All Products
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
+
+                    {/* Technical Highlights */}
+                    {product.technicalHighlights && product.technicalHighlights.length > 0 && (
+                        <div className="technical-highlights-section">
+                            <h3 className="th-section-title">Technical Highlights</h3>
+                            <div className="th-grid">
+                                {product.technicalHighlights.map((th, i) => (
+                                    <motion.div key={th.label} className="th-card"
+                                        initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: i * 0.08 }} viewport={{ once: true }}>
+                                        <div className="th-icon">{th.icon}</div>
+                                        <div>
+                                            <h4 className="th-label">{th.label}</h4>
+                                            <p className="th-desc">{th.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Product Features Checklist */}
+                    {product.features && product.features.length > 0 && (
+                        <div className="product-features-section">
+                            <h3 className="pf-title">Product Features</h3>
+                            <div className="pf-list">
+                                {product.features.map((feat, i) => (
+                                    <div key={i} className="pf-item">
+                                        <FiCheckCircle className="pf-icon" />
+                                        <span>{feat}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
                     {/* Related products */}
                     {series.products.length > 1 && (
@@ -86,7 +140,7 @@ export default function ProductDetail() {
                             <h3 className="related-title">More from {series.name}</h3>
                             <div className="related-grid">
                                 {series.products.filter(p => p.id !== productId).map(p => (
-                                    <Link key={p.id} to={`/products/${series.slug}/${p.id}`} className="related-card">
+                                    <Link key={p.id} to={`/products/${series.slug}/${p.id}`} className="related-card" id={`related-${p.id}`}>
                                         <div className="related-card-img" style={{ height: '100px', background: 'white', borderRadius: '8px', overflow: 'hidden', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                             <img src={p.image} alt={p.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                                         </div>
@@ -96,6 +150,18 @@ export default function ProductDetail() {
                             </div>
                         </div>
                     )}
+
+                    {/* Bottom CTA */}
+                    <div className="detail-bottom-cta">
+                        <div>
+                            <h3>Ready to Order {product.name}?</h3>
+                            <p>Contact our commercial team for pricing, bulk orders, and OEM specifications.</p>
+                        </div>
+                        <div className="detail-bottom-cta-actions">
+                            <Link to="/contact" className="btn btn-primary" id="detail-bottom-quote-btn">Get a Quote <FiArrowRight /></Link>
+                            <a href={`tel:${companyInfo.phone}`} className="btn btn-dark" id="detail-bottom-call-btn"><FiPhone /> {companyInfo.phone}</a>
+                        </div>
+                    </div>
                 </main>
 
                 <aside className="detail-sidebar">

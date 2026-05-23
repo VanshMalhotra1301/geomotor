@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FiArrowRight, FiArrowUpRight, FiPhone, FiMail, FiAward, FiCheckCircle } from 'react-icons/fi'
-import { MdPhotoCamera, MdFactory } from 'react-icons/md'
+import { FiArrowRight, FiArrowUpRight, FiPhone, FiMail, FiAward, FiCheckCircle, FiZap, FiShield } from 'react-icons/fi'
+import { MdFactory, MdPrecisionManufacturing, MdVerified } from 'react-icons/md'
 import { productSeries, companyInfo } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import mainImg from '../data/main.png'
@@ -9,6 +9,17 @@ import './Home.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } }
+
+const iconMap = {
+    "🏆": <FiAward />,
+    "🌐": <MdVerified />,
+    "🏭": <MdFactory />,
+    "⚡": <FiZap />,
+    "🔩": <MdPrecisionManufacturing />,
+    "🚚": <FiCheckCircle />,
+    "🤝": <FiCheckCircle />,
+    "📞": <FiPhone />,
+}
 
 export default function Home() {
     return (
@@ -28,25 +39,28 @@ export default function Home() {
                             <span className="badge badge-green">🏭 ISO Certified · ISI Registered Since 2007</span>
                         </motion.div>
                         <motion.h1 variants={fadeUp} className="hero-title">
-                            India's Most <span>Trusted</span><br />Cooler Motor <span>Brand</span>
+                            India's Most <span>Trusted</span><br />Cooler Motor <span>Manufacturer</span>
                         </motion.h1>
                         <motion.p variants={fadeUp} className="hero-desc">
-                            GEO® Motor India has been manufacturing premium ISI-registered cooler motors since 1995.
-                            Economical, reliable, and built for the Indian climate — 12W to 152W and beyond.
+                            GEO® Motor India has been precision-manufacturing ISI-registered cooler motors since 1995.
+                            Engineered for India's climate — trusted by OEMs, dealers, and industrial buyers across the nation.
                         </motion.p>
                         <motion.div variants={fadeUp} className="hero-actions">
-                            <Link to="/products" className="btn btn-primary">
+                            <Link to="/products" className="btn btn-primary" id="hero-explore-btn">
                                 Explore Products <FiArrowRight />
                             </Link>
-                            <Link to="/contact" className="btn btn-outline">
-                                Enquire Now
+                            <Link to="/oem-solutions" className="btn btn-outline" id="hero-oem-btn">
+                                OEM Solutions
+                            </Link>
+                            <Link to="/dealers" className="btn btn-dark" id="hero-dealer-btn">
+                                Become a Dealer
                             </Link>
                         </motion.div>
                         <motion.div variants={fadeUp} className="hero-quick-contacts">
-                            <a href={`tel:${companyInfo.phone}`} className="hero-contact-pill">
+                            <a href={`tel:${companyInfo.phone}`} className="hero-contact-pill" id="hero-phone-link">
                                 <FiPhone /> {companyInfo.phone}
                             </a>
-                            <a href={`mailto:${companyInfo.email}`} className="hero-contact-pill">
+                            <a href={`mailto:${companyInfo.email}`} className="hero-contact-pill" id="hero-email-link">
                                 <FiMail /> {companyInfo.email}
                             </a>
                         </motion.div>
@@ -59,8 +73,9 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         <div className="hero-img-frame">
-                            <img src={mainImg} alt="GEO Motor India Products" style={{ width: '100%', height: '380px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
+                            <img src={mainImg} alt="GEO Motor India — ISI Certified Cooler Motors" style={{ width: '100%', height: '380px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
                             <div className="hero-img-badge">GEO® Since 1995</div>
+                            <div className="hero-img-badge-2">India's First H-Frame Capcan Motor</div>
                         </div>
                     </motion.div>
                 </div>
@@ -68,13 +83,7 @@ export default function Home() {
                 {/* Stats Bar */}
                 <div className="hero-stats">
                     <div className="container stats-grid">
-                        {[
-                            { value: '1995', label: 'Founded' },
-                            { value: '30+', label: 'Years Experience' },
-                            { value: '6', label: 'Product Series' },
-                            { value: 'ISI', label: 'Certified Motors' },
-                            { value: '12W–152W', label: 'Power Range' },
-                        ].map(s => (
+                        {companyInfo.stats.map(s => (
                             <div key={s.label} className="stat-item">
                                 <span className="stat-value">{s.value}</span>
                                 <span className="stat-label">{s.label}</span>
@@ -90,27 +99,54 @@ export default function Home() {
                     <motion.div className="as-text" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
                         <motion.div variants={fadeUp} className="section-label">Who We Are</motion.div>
                         <motion.h2 variants={fadeUp} className="section-title">
-                            Powering India With <span>GEO®</span> Quality
+                            Powering India With <span>GEO®</span> Precision
                         </motion.h2>
                         <motion.p variants={fadeUp} className="section-desc">
                             {companyInfo.about}
                         </motion.p>
                         <motion.p variants={fadeUp} className="section-desc" style={{ marginTop: '12px' }}>
-                            Geo Motor India is an ISO-certified company committed to quality, reliability, and excellence in manufacturing.
-                            Since 2007, our motors carry the ISI mark — a testament to our uncompromising standards.
+                            Geo Motor India is an ISO 9001:2015 certified company committed to quality, reliability, and excellence in manufacturing.
+                            Since 2007, our motors carry the ISI mark under IS:996-2009 — a testament to our uncompromising engineering standards.
+                            {' '}<strong style={{ color: 'var(--green)' }}>{companyInfo.usp}.</strong>
                         </motion.p>
-                        <motion.div variants={fadeUp} style={{ marginTop: '28px' }}>
-                            <Link to="/about" className="btn btn-outline">Our Story <FiArrowRight /></Link>
+                        <motion.div variants={fadeUp} style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                            <Link to="/about" className="btn btn-outline" id="about-story-btn">Our Story <FiArrowRight /></Link>
+                            <Link to="/certifications" className="btn btn-dark" id="about-cert-btn">View Certifications</Link>
                         </motion.div>
                     </motion.div>
 
                     <div className="as-milestones">
-                        {companyInfo.milestones.slice(0, 4).map((m, i) => (
+                        {companyInfo.milestones.map((m, i) => (
                             <motion.div key={m.year} className="milestone-card"
                                 initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: i * 0.1 }} viewport={{ once: true }}>
                                 <span className="milestone-year">{m.year}</span>
                                 <p className="milestone-event">{m.event}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Manufacturing Strength ── */}
+            <section className="section manufacturing-section">
+                <div className="mfg-bg" />
+                <div className="container">
+                    <div className="section-header-centered">
+                        <div className="section-label">Manufacturing Excellence</div>
+                        <h2 className="section-title">Built in India. <span>Engineered to Last.</span></h2>
+                        <p className="section-desc" style={{ margin: '0 auto' }}>
+                            {companyInfo.manufacturing.intro}
+                        </p>
+                    </div>
+                    <div className="mfg-grid">
+                        {companyInfo.manufacturing.pillars.map((pillar, i) => (
+                            <motion.div key={pillar.title} className="mfg-card"
+                                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.1 }} viewport={{ once: true }}>
+                                <div className="mfg-icon">{pillar.icon}</div>
+                                <h3 className="mfg-title">{pillar.title}</h3>
+                                <p className="mfg-desc">{pillar.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -123,8 +159,8 @@ export default function Home() {
                     <div className="section-header-centered">
                         <div className="section-label">Our Catalogue</div>
                         <h2 className="section-title">Complete <span>Product</span> Range</h2>
-                        <p className="section-desc">
-                            Six comprehensive product series covering commercial coolers, industrial motors, exhaust fans, water pumps, metal blades, and chimney motors.
+                        <p className="section-desc" style={{ margin: '0 auto' }}>
+                            Six comprehensive product series covering commercial coolers, industrial motors, exhaust fans, water pumps, metal blades, and chimney motors — all ISI-registered and Made in India.
                         </p>
                     </div>
                     <div className="products-grid">
@@ -137,32 +173,54 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="products-cta">
-                        <Link to="/products" className="btn btn-outline">View All Products <FiArrowUpRight /></Link>
+                        <Link to="/products" className="btn btn-outline" id="home-view-all-btn">View All Products <FiArrowUpRight /></Link>
                     </div>
                 </div>
             </section>
 
-            {/* ── Why GEO ── */}
+            {/* ── Why GEO (8 cards) ── */}
             <section className="section why-section">
                 <div className="why-bg" />
                 <div className="container">
                     <div className="section-header-centered">
                         <div className="section-label">Why Choose Us</div>
                         <h2 className="section-title">The <span>GEO®</span> Advantage</h2>
+                        <p className="section-desc" style={{ margin: '0 auto' }}>
+                            Thirty years of engineering discipline, government-verified certifications, and a nationwide supply network — here's why India's leading cooler brands choose GEO.
+                        </p>
                     </div>
-                    <div className="why-grid">
-                        {[
-                            { icon: <FiAward />, title: 'ISI Registered', desc: 'All motors carry the ISI mark — guaranteed quality and safety compliance.' },
-                            { icon: <FiCheckCircle />, title: 'ISO Certified', desc: 'ISO certification reflects our adherence to international manufacturing standards.' },
-                            { icon: <MdFactory />, title: 'In-House Manufacturing', desc: 'Our own stamping and winding plants ensure end-to-end quality control.' },
-                            { icon: <FiPhone />, title: 'Toll-Free Support', desc: '24×7 toll-free helpline — 1800 571 6999 — always here when you need us.' },
-                        ].map((w, i) => (
+                    <div className="why-grid-8">
+                        {companyInfo.whyGeo.map((w, i) => (
                             <motion.div key={w.title} className="why-card"
                                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }} viewport={{ once: true }}>
-                                <div className="why-icon">{w.icon}</div>
+                                transition={{ delay: i * 0.08 }} viewport={{ once: true }}>
+                                <div className="why-icon-emoji">{w.icon}</div>
                                 <h3 className="why-title">{w.title}</h3>
                                 <p className="why-desc">{w.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Industries We Serve ── */}
+            <section className="section industries-section">
+                <div className="container">
+                    <div className="section-header-centered">
+                        <div className="section-label">Industries Served</div>
+                        <h2 className="section-title">Who We <span>Serve</span></h2>
+                        <p className="section-desc" style={{ margin: '0 auto' }}>
+                            From cooler OEM manufacturers to industrial facility managers, GEO® motors power businesses across India's cooling industry.
+                        </p>
+                    </div>
+                    <div className="industries-grid">
+                        {companyInfo.industryServed.map((ind, i) => (
+                            <motion.div key={ind.name} className="industry-card"
+                                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.09 }} viewport={{ once: true }}>
+                                <div className="industry-icon">{ind.icon}</div>
+                                <h4 className="industry-name">{ind.name}</h4>
+                                <p className="industry-desc">{ind.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -173,7 +231,10 @@ export default function Home() {
             <section className="section testimonials-section">
                 <div className="container" style={{ marginBottom: '32px', textAlign: 'center' }}>
                     <div className="section-label">Trusted By Industry</div>
-                    <h2 className="section-title">Client <span>Testimonials</span></h2>
+                    <h2 className="section-title">What Our <span>Partners Say</span></h2>
+                    <p className="section-desc" style={{ margin: '0 auto' }}>
+                        OEM manufacturers, industrial distributors, and dealer partners across India share their GEO® experience.
+                    </p>
                 </div>
                 <div className="marquee-wrapper">
                     <div className="marquee-content testimonials-track">
@@ -189,7 +250,6 @@ export default function Home() {
                                 </div>
                             </div>
                         ))}
-                        {/* Duplicate for infinite loop */}
                         {companyInfo.testimonials.map((t, i) => (
                             <div key={`dup-${i}`} className="testimonial-card">
                                 <p className="t-text">"{t.text}"</p>
@@ -206,10 +266,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ── Clients ── */}
+            {/* ── OEM Partners Marquee ── */}
             <section className="section clients-section">
                 <div className="container" style={{ textAlign: 'center', marginBottom: '32px' }}>
-                    <h3 style={{ color: 'var(--text-muted)', fontSize: '14px', letterSpacing: '2px', textTransform: 'uppercase' }}>Our OEM Partners</h3>
+                    <h3 style={{ color: 'var(--text-muted)', fontSize: '14px', letterSpacing: '2px', textTransform: 'uppercase' }}>Trusted OEM & Distribution Partners</h3>
                 </div>
                 <div className="marquee-wrapper">
                     <div className="marquee-content clients-track">
@@ -223,16 +283,36 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* ── Dealer CTA Strip ── */}
+            <section className="dealer-strip">
+                <div className="container dealer-strip-inner">
+                    <div className="dealer-strip-icon">🤝</div>
+                    <div className="dealer-strip-text">
+                        <h2>Grow Your Business with <span>GEO®</span></h2>
+                        <p>Join our nationwide dealer and distributor network. Competitive margins, ISI-certified products, reliable supply, and full business support.</p>
+                    </div>
+                    <div className="dealer-strip-actions">
+                        <Link to="/dealers" className="btn btn-primary" id="dealer-strip-apply-btn">
+                            Become a Dealer <FiArrowRight />
+                        </Link>
+                        <a href={`tel:${companyInfo.phone}`} className="btn btn-outline" id="dealer-strip-call-btn">
+                            <FiPhone /> {companyInfo.phone}
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* ── CTA Strip ── */}
             <section className="cta-strip">
                 <div className="container cta-inner">
                     <div className="cta-text">
                         <h2>Ready to Work With <span>GEO Motor India</span>?</h2>
-                        <p>Get in touch for bulk enquiries, OEM partnerships, or product information.</p>
+                        <p>Get in touch for bulk enquiries, OEM partnerships, product specifications, or dealer applications.</p>
                     </div>
                     <div className="cta-actions">
-                        <Link to="/contact" className="btn btn-primary">Enquire Now <FiArrowRight /></Link>
-                        <a href={`tel:${companyInfo.phone}`} className="btn btn-dark">
+                        <Link to="/contact" className="btn btn-primary" id="home-cta-enquire-btn">Enquire Now <FiArrowRight /></Link>
+                        <Link to="/oem-solutions" className="btn btn-outline" id="home-cta-oem-btn">OEM Solutions</Link>
+                        <a href={`tel:${companyInfo.phone}`} className="btn btn-dark" id="home-cta-call-btn">
                             <FiPhone /> {companyInfo.phone}
                         </a>
                     </div>
