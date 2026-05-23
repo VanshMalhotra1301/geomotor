@@ -1,0 +1,60 @@
+.enquiry-widget {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+
+.ew-header {
+    margin-bottom: 20px;
+}
+
+.ew-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.ew-title span {
+    color: var(--green);
+}
+
+.ew-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.ew-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ew-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.ew-submit {
+    width: 100%;
+    justify-content: center;
+}
+
+.ew-success {
+    font-size: 13px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.ew-error {
+    font-size: 13px;
+    color: #e74c3c;
+}
+
+@media (max-width: 500px) {
+    .ew-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,121 @@
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 48px;
+    padding-top: 56px;
+    padding-bottom: 80px;
+    align-items: start;
+}
+
+.about-section-head {
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.about-para {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+
+/* Timeline */
+.timeline {
+    margin-top: 48px;
+}
+
+.timeline-title {
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 28px;
+}
+
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--green), transparent);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 28px 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 3px solid var(--dark);
+    box-shadow: 0 0 0 2px var(--green);
+}
+
+.timeline-year {
+    font-family: var(--font-head);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--green);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.timeline-event {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Certifications */
+.cert-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.25);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-head);
+}
+
+.about-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sidebar {
+        position: static;
+    }
+}

@@ -1,0 +1,78 @@
+.pcard {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+.pcard:hover {
+    border-color: rgba(46, 204, 113, 0.35);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+.pcard-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.pcard-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.pcard-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.pcard-name-sm {
+    font-size: 14px;
+}
+
+.pcard-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.pcard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 8px;
+}
+
+.pcard-count {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.pcard-cta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    font-family: var(--font-head);
+    transition: var(--transition);
+}
+
+.pcard:hover .pcard-cta {
+    gap: 8px;
+}
