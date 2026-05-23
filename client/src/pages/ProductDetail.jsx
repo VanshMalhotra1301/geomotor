@@ -46,8 +46,8 @@ export default function ProductDetail() {
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
 
                         {/* Image */}
-                        <div className="detail-img-frame" style={{ background: '#f5f5f5', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <img src={product.image} alt={`GEO ${product.name} — ${series.name}`} style={{ width: '100%', maxHeight: '450px', objectFit: 'contain' }} />
+                        <div className="detail-img-frame">
+                            <img src={product.image} alt={`GEO ${product.name} — ${series.name}`} />
                         </div>
 
                         {/* Info */}
