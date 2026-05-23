@@ -73,7 +73,9 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         <div className="hero-img-frame">
-                            <img src={mainImg} alt="GEO Motor India — ISI Certified Cooler Motors" style={{ width: '100%', height: '380px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
+                            <div className="hero-img-inner">
+                                <img src={mainImg} alt="GEO Motor India — ISI Certified Cooler Motors" />
+                            </div>
                             <div className="hero-img-badge">GEO® Since 1995</div>
                             <div className="hero-img-badge-2">India's First H-Frame Capcan Motor</div>
                         </div>
