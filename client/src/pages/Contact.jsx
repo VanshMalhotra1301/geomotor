@@ -22,21 +22,24 @@ export default function Contact() {
             setStatus('captcha')
             return
         }
-        setLoading(true)
-        try {
-            await axios.post('https://formsubmit.co/ajax/info@geomotorindia.com', {
-                ...form,
-                _subject: "New Enquiry from GEO Motor Website",
-                _captcha: "false"
-            })
-            setStatus('success')
-            setForm({ name: '', email: '', phone: '', enquiryType: '', message: '' })
-            setCaptchaInput('')
-        } catch {
-            setStatus('error')
-        } finally {
-            setLoading(false)
-        }
+        
+        const subject = encodeURIComponent(`New Enquiry: ${form.enquiryType || 'General'}`);
+        const body = encodeURIComponent(`You have a new enquiry from the GEO Motor Website:
+
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+Nature of Enquiry: ${form.enquiryType}
+
+Message:
+${form.message}
+`);
+
+        window.location.href = `mailto:info@geomotorindia.com?subject=${subject}&body=${body}`;
+        
+        setStatus('success');
+        setForm({ name: '', email: '', phone: '', enquiryType: '', message: '' });
+        setCaptchaInput('');
     }
 
     return (
