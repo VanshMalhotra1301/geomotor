@@ -449,7 +449,8 @@ export const companyInfo = {
     isi: true,
     email: "info@geomotorindia.com",
     emailAlt: "info.geomotorindia.care@gmail.com",
-    phone: "+91 9953316357",
+    phone: "1800 571 6999",
+    directPhone: "+91 9953316357",
     phones: ["+91 9953316357", "+91 7900830097", "+91 9953519307", "+91 9953331357"],
     gstin: "07AUQPK9142D1ZF",
     udyam: "UDYAM-DL-06-0116986",
@@ -535,8 +536,8 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         },
         {
             icon: "📞",
-            title: "24×7 Direct Support",
-            desc: "Our dedicated direct helpline — +91 9953316357 — connects you to our technical and commercial team any time, any day.",
+            title: "24×7 Toll-Free Support",
+            desc: "Our dedicated toll-free helpline — 1800 571 6999 — connects you to our technical and commercial team any time, any day.",
         },
     ],
 
@@ -634,7 +635,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
             { type: "Authorized Dealer", scope: "City / District", desc: "Serve retail customers, electric shops, and local cooler manufacturers within your city or district." },
             { type: "OEM Supply Partner", scope: "Pan India / B2B", desc: "Dedicated supply channel for cooler manufacturing brands requiring large-volume, consistent motor supply." },
         ],
-        cta: "Contact our dealer team on +91 9953316357 or email info@geomotorindia.com to discuss territory availability and partnership terms.",
+        cta: "Contact our dealer team on 1800 571 6999 or email info@geomotorindia.com to discuss territory availability and partnership terms.",
     },
 
     milestones: [
@@ -714,15 +715,15 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         { q: "What industries do you serve?", a: "Cooler manufacturers, industrial cooling companies, tent cooler suppliers, kitchen chimney brands, OEM appliance brands, and industrial distributors. We also supply dealers, hardware stores, and electric shops through our nationwide dealer network." },
         { q: "Do you support bulk orders?", a: "Absolutely. Our automated T-200 winding plant and stamping lines support bulk production runs of 10,000+ units with consistent quality and reliable delivery timelines. Contact us with your volume requirement for a dedicated production schedule." },
         { q: "What is your manufacturing facility?", a: "Our factory is located at F-43, DSSIIDC Industrial Complex, Pocket-F, Sector-5, Bawana Industrial Area, Delhi. The facility includes a T-200 automatic winding plant, fully functional stamping plant, and a fully automatic Motor Cover & Blade Plant." },
-        { q: "How can I become a GEO dealer or distributor?", a: "Call our helpline number +91 9953316357 or email info@geomotorindia.com to discuss dealership terms, territory availability, and partnership requirements. We welcome applications from established electrical, hardware, and cooler parts businesses." },
+        { q: "How can I become a GEO dealer or distributor?", a: "Call our toll-free number 1800 571 6999 or email info@geomotorindia.com to discuss dealership terms, territory availability, and partnership requirements. We welcome applications from established electrical, hardware, and cooler parts businesses." },
         { q: "Do GEO motors come with copper winding?", a: "Yes. GEO motors are available in both copper and aluminium winding options. Copper winding offers superior conductivity, better thermal performance, and longer motor life. Our engineering team will recommend the optimal winding choice based on your duty cycle and budget requirements." },
         { q: "What RPM options are available in your cooler motors?", a: "Our commercial cooler motors are available at 900 RPM, 1400 RPM, and 2800 RPM. Industrial motors run at 1400 and 2800 RPM. For OEM requirements, we can engineer custom RPM configurations to match your specific blade and airflow specifications." },
         { q: "What is the power consumption of your motors?", a: "GEO motors are engineered for energy efficiency. Our commercial range covers 12W, 18W, 92W, and 152W — delivering maximum airflow per watt consumed. Our ISI registration ensures all motors meet the energy efficiency benchmarks defined in IS:996-2009." },
-        { q: "Do you provide after-sale technical support?", a: "Yes. Our direct helpline — +91 9953316357 — provides technical support for all product queries, installation guidance, and troubleshooting. You can also reach our team at info@geomotorindia.com for detailed technical assistance." },
+        { q: "Do you provide after-sale technical support?", a: "Yes. Our toll-free helpline — 1800 571 6999 — provides technical support for all product queries, installation guidance, and troubleshooting. You can also reach our team at info@geomotorindia.com for detailed technical assistance." },
         { q: "How long is the warranty on GEO motors?", a: "GEO commercial and industrial cooler motors carry a 12-month warranty against manufacturing defects. Mini tank water pumps carry a 6-month warranty. Warranty coverage is subject to normal use conditions and proper installation as per product guidelines." },
         { q: "Do you export your products?", a: "GEO Motor India is focused on serving the Indian market with our full product range. We are open to export enquiries from international buyers — please contact our commercial team at info@geomotorindia.com to discuss export requirements and capabilities." },
         { q: "What is the difference between H-Frame and E-Frame motors?", a: "H-Frame motors use a rigid H-shaped structural frame that provides superior structural integrity, precise shaft alignment, and excellent heat dissipation — preferred for premium cooler brands. E-Frame motors use an economical E-shaped design that delivers strong performance at a more competitive price point — ideal for high-volume OEM production." },
-        { q: "Can I request product specifications and technical data sheets?", a: "Yes. Detailed technical specifications and data sheets are available for all GEO product series. Contact our team at info@geomotorindia.com or call +91 9953316357 to request documentation for your specific product requirement." },
+        { q: "Can I request product specifications and technical data sheets?", a: "Yes. Detailed technical specifications and data sheets are available for all GEO product series. Contact our team at info@geomotorindia.com or call 1800 571 6999 to request documentation for your specific product requirement." },
     ],
 
     enquiryTypes: [
@@ -742,7 +743,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         bulkOrder: "Bulk Order Inquiry",
         oemSupport: "OEM Manufacturing Support",
         getSpecs: "Get Product Specifications",
-        callNow: "Call: +91 9953316357",
+        callNow: "Call: 1800 571 6999",
         whatsapp: "WhatsApp Us",
     },
 
@@ -758,6 +759,6 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         dealerTitle: "Become a GEO® Dealer — Join India's Trusted Cooler Motor Network",
         dealerDesc: "Partner with GEO Motor India as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today.",
         contactTitle: "Contact GEO Motor India — Motor Enquiries, OEM & Dealer Partnerships",
-        contactDesc: "Contact GEO Motor India for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Helpline: +91 9953316357 | info@geomotorindia.com",
+        contactDesc: "Contact GEO Motor India for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com",
     },
 };

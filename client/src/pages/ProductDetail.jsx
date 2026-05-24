@@ -87,7 +87,7 @@ export default function ProductDetail() {
 
                             {/* B2B Direct Helpline CTAs */}
                             <div className="detail-quick-contact-row">
-                                <a href={`tel:${companyInfo.phone}`} className="btn-direct-call" id="detail-quick-call">
+                                <a href={`tel:${companyInfo.directPhone}`} className="btn-direct-call" id="detail-quick-call">
                                     <FiPhone /> Call Now: +91 9953316357
                                 </a>
                                 <a href={companyInfo.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-direct-whatsapp" id="detail-quick-whatsapp">
@@ -170,7 +170,7 @@ export default function ProductDetail() {
                         </div>
                         <div className="detail-bottom-cta-actions">
                             <Link to="/contact" className="btn btn-primary" id="detail-bottom-quote-btn">Get a Quote <FiArrowRight /></Link>
-                            <a href={`tel:${companyInfo.phone}`} className="btn btn-phone-outline" id="detail-bottom-call-btn"><FiPhone /> Call Now</a>
+                            <a href={`tel:${companyInfo.directPhone}`} className="btn btn-phone-outline" id="detail-bottom-call-btn"><FiPhone /> Call Now</a>
                             <a href={companyInfo.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-whatsapp-solid" id="detail-bottom-whatsapp-btn"><FaWhatsapp /> WhatsApp</a>
                         </div>
                     </div>
