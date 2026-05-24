@@ -5,6 +5,7 @@ import { FiArrowRight, FiArrowUpRight, FiPhone, FiMail, FiAward, FiCheckCircle, 
 import { MdFactory, MdPrecisionManufacturing, MdVerified } from 'react-icons/md'
 import { productSeries, companyInfo } from '../data/products'
 import ProductCard from '../components/ProductCard'
+import MotorParameters from '../components/MotorParameters'
 import mainImg from '../data/main.png'
 import './Home.css'
 
@@ -286,6 +287,9 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* ── Motor Parameters (How To Choose) ── */}
+            <MotorParameters />
+
             {/* ── Dealer CTA Strip ── */}
             <section className="dealer-strip">
                 <div className="container dealer-strip-inner">
@@ -319,6 +323,11 @@ export default function Home() {
                             <FiPhone /> {companyInfo.phone}
                         </a>
                     </div>
+                </div>
+                <div className="container" style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
+                    <a href={`mailto:${companyInfo.email}`} style={{ display: 'flex', alignItems: 'center', gap: '16px', color: 'var(--white)', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>
+                        <FiMail style={{ fontSize: '32px', color: 'var(--white)' }} /> {companyInfo.email}
+                    </a>
                 </div>
             </section>
         </div>

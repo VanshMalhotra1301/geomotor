@@ -24,7 +24,11 @@ export default function Contact() {
         }
         setLoading(true)
         try {
-            await axios.post('http://localhost:5000/api/enquiry', form)
+            await axios.post('https://formsubmit.co/ajax/info@geomotorindia.com', {
+                ...form,
+                _subject: "New Enquiry from GEO Motor Website",
+                _captcha: "false"
+            })
             setStatus('success')
             setForm({ name: '', email: '', phone: '', enquiryType: '', message: '' })
             setCaptchaInput('')
