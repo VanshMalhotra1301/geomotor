@@ -1,3 +1,4 @@
+// B2B Cooler Motor Manufacturer Portal — Home
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FiArrowRight, FiArrowUpRight, FiPhone, FiMail, FiAward, FiCheckCircle, FiZap, FiShield } from 'react-icons/fi'
