@@ -1,6 +1,7 @@
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowLeft, FiCheckCircle, FiArrowRight, FiPhone } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
 import './ProductDetail.css'
@@ -84,6 +85,16 @@ export default function ProductDetail() {
                                 </div>
                             )}
 
+                            {/* B2B Direct Helpline CTAs */}
+                            <div className="detail-quick-contact-row">
+                                <a href={`tel:${companyInfo.phone}`} className="btn-direct-call" id="detail-quick-call">
+                                    <FiPhone /> Call Now: +91 9953316357
+                                </a>
+                                <a href={companyInfo.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-direct-whatsapp" id="detail-quick-whatsapp">
+                                    <FaWhatsapp /> WhatsApp Support
+                                </a>
+                            </div>
+
                             {/* Dual CTA */}
                             <div className="detail-actions">
                                 <Link to="/contact" className="btn btn-primary" id="detail-enquire-btn">
@@ -159,7 +170,8 @@ export default function ProductDetail() {
                         </div>
                         <div className="detail-bottom-cta-actions">
                             <Link to="/contact" className="btn btn-primary" id="detail-bottom-quote-btn">Get a Quote <FiArrowRight /></Link>
-                            <a href={`tel:${companyInfo.phone}`} className="btn btn-dark" id="detail-bottom-call-btn"><FiPhone /> {companyInfo.phone}</a>
+                            <a href={`tel:${companyInfo.phone}`} className="btn btn-phone-outline" id="detail-bottom-call-btn"><FiPhone /> Call Now</a>
+                            <a href={companyInfo.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-whatsapp-solid" id="detail-bottom-whatsapp-btn"><FaWhatsapp /> WhatsApp</a>
                         </div>
                     </div>
                 </main>

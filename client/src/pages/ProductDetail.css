@@ -359,3 +359,99 @@
         align-items: flex-start;
     }
 }
+
+/* ── B2B Quick Contacts ── */
+.detail-quick-contact-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btn-direct-call, .btn-direct-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 160px;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    font-size: 13.5px;
+    font-weight: 700;
+    font-family: var(--font-head);
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-direct-call {
+    background: var(--green);
+    color: var(--dark);
+    border: 1px solid var(--green);
+}
+
+.btn-direct-call:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.btn-direct-whatsapp {
+    background: #25d366;
+    color: var(--white);
+    border: 1px solid #25d366;
+}
+
+.btn-direct-whatsapp:hover {
+    background: #20ba5a;
+    border-color: #20ba5a;
+    transform: translateY(-2px);
+}
+
+/* Bottom CTA actions buttons */
+.btn-phone-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-head);
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-phone-outline:hover {
+    border-color: var(--green);
+    color: var(--green);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-head);
+    background: #25d366;
+    color: var(--white);
+    border: 1px solid #25d366;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-whatsapp-solid:hover {
+    background: #20ba5a;
+    border-color: #20ba5a;
+    transform: translateY(-2px);
+}
