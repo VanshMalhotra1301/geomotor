@@ -5,6 +5,11 @@ import miniTankImg from './mini_tank_water_pump.png';
 import metalBladeImg from './metal_blade.png';
 import chimneyMotorImg from './chimney_motor.png';
 import hFrameCapconImg from './h_frame_capcon.png';
+import hFrameMetalImg from './h_frame_metal.png';
+import eFrameMetalShellImg from './e_frame_metal_shell.png';
+import industrial24Img from './24_inch_Aluminium_Shell_Cooler_Motor.png';
+import industrial30Img from './30_Inch_Aluminium_Shell_Cooler_Motor.png';
+import exhaustFan996ModelImg from './15 Inch to 24_inch_Exhaust_Fan_Motor_996_Model.png';
 
 export const productSeries = [
     {
@@ -97,7 +102,7 @@ export const productSeries = [
                     "ISI-registered — guaranteed quality and safety",
                     "Multiple RPM options for optimal blade matching",
                 ],
-                image: commercialMotorImg,
+                image: hFrameMetalImg,
             },
             {
                 id: "e-frame-metal-shell",
@@ -128,7 +133,7 @@ export const productSeries = [
                     "Economy pricing for competitive OEM cost structures",
                     "Proven performance in India's top cooler brands",
                 ],
-                image: commercialMotorImg,
+                image: eFrameMetalShellImg,
             },
         ],
     },
@@ -188,7 +193,7 @@ export const productSeries = [
                     "Optimized for 1400 and 2800 RPM blade matching",
                     "Trusted by India's leading tent cooler manufacturers",
                 ],
-                image: industrialMotorImg,
+                image: industrial24Img,
             },
             {
                 id: "30-inch-aluminium",
@@ -219,7 +224,7 @@ export const productSeries = [
                     "Ideal for factories, event tents, and large open industrial spaces",
                     "Low vibration design for stable structural mounting",
                 ],
-                image: industrialMotorImg,
+                image: industrial30Img,
             },
         ],
     },
@@ -278,7 +283,7 @@ export const productSeries = [
                     "Sturdy mounting legs for secure frame installation",
                     "Available in 1400 and 2800 RPM for different airflow requirements",
                 ],
-                image: exhaustFanImg,
+                image: exhaustFan996ModelImg,
             },
         ],
     },
