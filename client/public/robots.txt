@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /components/
+Disallow: /src/
+
+Sitemap: https://geomotorsindia.vercel.app/sitemap.xml

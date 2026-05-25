@@ -5,6 +5,29 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
 import './ProductDetail.css'
+    import { useParams } from 'react-router-dom';
+import { productSeries } from '../data/products';
+import SEO from '../components/SEO';
+
+export default function ProductDetail() {
+  const { seriesSlug, productId } = useParams();
+
+  const series = productSeries.find(s => s.slug === seriesSlug);
+  const product = series?.products.find(p => p.id === productId);
+
+  if (!product) return <div>Product Not Found</div>;
+
+  return (
+    <>
+      <SEO 
+        title={`${product.name} | GEO® Motor India`}
+        description={`${product.desc} Engineered with ${product.specs.find(s => s.label === "Winding")?.value || 'premium'} winding and covered under a ${product.warranty} warranty.`}
+        slug={`/products/${seriesSlug}/${productId}`}
+      />
+      {/* Premium layout UI components go here */}
+    </>
+  );
+}
 
 export default function ProductDetail() {
     const { seriesSlug, productId } = useParams()
