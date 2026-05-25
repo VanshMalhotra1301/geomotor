@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { FiArrowRight, FiCheckCircle, FiPhone, FiMail } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
+import SEO from '../components/SEO'
+import JsonLd, { buildServiceSchema, buildBreadcrumbSchema } from '../components/JsonLd'
 import './OEM.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55 } } }
@@ -11,6 +13,23 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } }
 export default function OEM() {
     return (
         <div className="oem-page">
+            <SEO 
+                title={companyInfo.seoMeta?.oemTitle || "OEM Motor Manufacturing Solutions — GEO Motor India"}
+                description={companyInfo.seoMeta?.oemDesc || "Custom OEM motor engineering for India's leading cooler brands. GEO Motor India offers custom RPM, frame, winding, and blade solutions. ISI-certified OEM supply with bulk production capability."}
+                slug="/oem-solutions"
+            />
+            <JsonLd data={[
+                buildServiceSchema({
+                    name: 'OEM Motor Manufacturing Solutions',
+                    description: companyInfo.oem.intro,
+                    url: '/oem-solutions'
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: 'OEM Solutions' }
+                ])
+            ]} />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">

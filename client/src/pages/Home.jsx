@@ -8,6 +8,7 @@ import ProductCard from '../components/ProductCard'
 import MotorParameters from '../components/MotorParameters'
 import mainImg from '../data/main.png'
 import SEO from '../components/SEO' // Imported the reusable SEO module
+import JsonLd, { buildBreadcrumbSchema } from '../components/JsonLd'
 import './Home.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
@@ -34,6 +35,7 @@ export default function Home() {
                 keywords={companyInfo.seoMeta?.homeKeywords || "cooler motor manufacturer, ISI certified cooler motor, cooler motor supplier India, industrial cooler motor, exhaust fan motor manufacturer, chimney motor supplier"}
                 slug=""
             />
+            <JsonLd data={buildBreadcrumbSchema([{ name: 'Home', url: '/' }])} />
 
             {/* ── Hero ── */}
             <section className="hero">

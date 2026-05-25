@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiChevronDown } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
+import SEO from '../components/SEO'
+import JsonLd, { buildFAQSchema, buildBreadcrumbSchema } from '../components/JsonLd'
 import './FAQ.css'
 
 // Combine original FAQ + additional expanded FAQ
@@ -13,6 +15,17 @@ export default function FAQ() {
 
     return (
         <div className="faq-page">
+            <SEO
+                title="Frequently Asked Questions — GEO Motor India | Cooler Motors, OEM, Dealers"
+                description="Find answers to common questions about GEO Motor India's ISI-certified cooler motors, OEM manufacturing solutions, dealer partnerships, bulk orders, and product specifications."
+                keywords="cooler motor FAQ, GEO motor questions, ISI cooler motor queries, OEM motor FAQ, cooler motor dealer FAQ"
+                slug="/faq"
+            />
+            <JsonLd data={[
+                buildFAQSchema(allFaq),
+                buildBreadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'FAQ' }])
+            ]} />
+
             <div className="page-banner">
                 <div className="container">
                     <div className="page-banner-breadcrumb"><Link to="/">Home</Link> / <span>FAQ</span></div>

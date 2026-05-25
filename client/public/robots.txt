@@ -1,7 +1,12 @@
+# GEO Motor India — robots.txt
+# https://geomotorsindia.vercel.app
+
 User-agent: *
 Allow: /
 
-Disallow: /components/
-Disallow: /src/
+# Block build artifacts only
+Disallow: /assets/*.js$
+Disallow: /assets/*.css$
 
+# Sitemap
 Sitemap: https://geomotorsindia.vercel.app/sitemap.xml

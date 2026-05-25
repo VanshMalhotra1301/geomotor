@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FiArrowRight, FiCheckCircle, FiPhone, FiMail } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
+import SEO from '../components/SEO'
+import JsonLd, { buildServiceSchema, buildBreadcrumbSchema } from '../components/JsonLd'
 import './Dealers.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55 } } }
@@ -10,6 +12,23 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } }
 export default function Dealers() {
     return (
         <div className="dealers-page">
+            <SEO 
+                title={companyInfo.seoMeta?.dealerTitle || "Become a GEO® Dealer — Join India's Trusted Cooler Motor Network"}
+                description={companyInfo.seoMeta?.dealerDesc || "Partner with GEO Motor India as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today."}
+                slug="/dealers"
+            />
+            <JsonLd data={[
+                buildServiceSchema({
+                    name: 'GEO Dealership Program',
+                    description: companyInfo.dealerInfo.intro,
+                    url: '/dealers'
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: 'Dealer Program' }
+                ])
+            ]} />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">

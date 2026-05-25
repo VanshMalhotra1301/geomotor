@@ -5,6 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
 import SEO from '../components/SEO'
+import JsonLd, { buildProductSchema, buildBreadcrumbSchema } from '../components/JsonLd'
 import './ProductDetail.css'
 
 export default function ProductDetail() {
@@ -36,7 +37,17 @@ export default function ProductDetail() {
                 title={`${product.name} | ${companyInfo.brand} Motor India`}
                 description={`${product.desc} Engineered with ${windingType} winding and backed by a ${product.warranty || 'heavy-duty'} warranty.`}
                 slug={`/products/${seriesSlug}/${productId}`}
+                ogType="product"
             />
+            <JsonLd data={[
+                buildProductSchema(product, series),
+                buildBreadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: 'Products', url: '/products' },
+                    { name: series.name, url: `/products/${series.slug}` },
+                    { name: product.name }
+                ])
+            ]} />
 
             {/* Banner */}
             <div className="page-banner">

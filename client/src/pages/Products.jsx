@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { FiChevronRight, FiCheckCircle, FiArrowRight, FiPhone } from 'react-icons/fi'
 import { productSeries, companyInfo } from '../data/products'
 import ProductCard from '../components/ProductCard'
+import SEO from '../components/SEO'
+import JsonLd, { buildBreadcrumbSchema } from '../components/JsonLd'
 import './Products.css'
 
 export default function Products() {
@@ -13,6 +15,18 @@ export default function Products() {
 
     return (
         <div className="products-page">
+            <SEO
+                title={`${activeSeries.name} — GEO Motor India | ISI-Certified Cooler Motors`}
+                description={activeSeries.description}
+                keywords={companyInfo.seoMeta?.productsKeywords || 'cooler motor products, ISI cooler motor, commercial cooler motor, industrial motor, exhaust fan motor'}
+                slug={`/products/${activeSeries.slug}`}
+            />
+            <JsonLd data={buildBreadcrumbSchema([
+                { name: 'Home', url: '/' },
+                { name: 'Products', url: '/products' },
+                { name: activeSeries.name }
+            ])} />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">

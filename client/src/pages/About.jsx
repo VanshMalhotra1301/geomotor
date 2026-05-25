@@ -4,6 +4,7 @@ import { FiArrowRight, FiCheckCircle } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
 import SEO from '../components/SEO' // Imported the reusable SEO metadata engine
+import JsonLd, { buildBreadcrumbSchema } from '../components/JsonLd'
 import './About.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55 } } }
@@ -18,6 +19,10 @@ export default function About() {
                 description={companyInfo.seoMeta?.aboutDesc || "Founded in 1995 by Mr. Vijay Sikka, GEO Motor India is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment."}
                 slug="/about"
             />
+            <JsonLd data={buildBreadcrumbSchema([
+                { name: 'Home', url: '/' },
+                { name: 'About Us' }
+            ])} />
 
             {/* Banner */}
             <div className="page-banner">

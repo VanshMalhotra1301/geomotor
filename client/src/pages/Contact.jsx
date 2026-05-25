@@ -5,6 +5,8 @@ import { FiSend, FiMapPin, FiPhone, FiMail } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import { companyInfo } from '../data/products'
 import axios from 'axios'
+import SEO from '../components/SEO'
+import JsonLd, { buildBreadcrumbSchema } from '../components/JsonLd'
 import './Contact.css'
 
 export default function Contact() {
@@ -44,6 +46,16 @@ ${form.message}
 
     return (
         <div className="contact-page">
+            <SEO 
+                title={companyInfo.seoMeta?.contactTitle || "Contact GEO Motor India — Motor Enquiries, OEM & Dealer Partnerships"}
+                description={companyInfo.seoMeta?.contactDesc || "Contact GEO Motor India for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com"}
+                slug="/contact"
+            />
+            <JsonLd data={buildBreadcrumbSchema([
+                { name: 'Home', url: '/' },
+                { name: 'Contact Us' }
+            ])} />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">

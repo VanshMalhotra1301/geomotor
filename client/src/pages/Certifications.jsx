@@ -2,11 +2,23 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FiAward, FiShield } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
+import SEO from '../components/SEO'
+import JsonLd, { buildBreadcrumbSchema } from '../components/JsonLd'
 import './Certifications.css'
 
 export default function Certifications() {
     return (
         <div className="cert-page">
+            <SEO 
+                title="Certifications & Quality | GEO Motor India"
+                description="View GEO Motor India's manufacturing certifications including ISI (IS:996-2009), ISO 9001:2015, UDYAM MSME, and GSTIN verification."
+                slug="/certifications"
+            />
+            <JsonLd data={buildBreadcrumbSchema([
+                { name: 'Home', url: '/' },
+                { name: 'Certifications' }
+            ])} />
+
             <div className="page-banner">
                 <div className="container">
                     <div className="page-banner-breadcrumb"><Link to="/">Home</Link> / <span>Certifications</span></div>
