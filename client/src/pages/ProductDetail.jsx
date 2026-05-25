@@ -4,30 +4,8 @@ import { FiArrowLeft, FiCheckCircle, FiArrowRight, FiPhone } from 'react-icons/f
 import { FaWhatsapp } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
+import SEO from '../components/SEO'
 import './ProductDetail.css'
-    import { useParams } from 'react-router-dom';
-import { productSeries } from '../data/products';
-import SEO from '../components/SEO';
-
-export default function ProductDetail() {
-  const { seriesSlug, productId } = useParams();
-
-  const series = productSeries.find(s => s.slug === seriesSlug);
-  const product = series?.products.find(p => p.id === productId);
-
-  if (!product) return <div>Product Not Found</div>;
-
-  return (
-    <>
-      <SEO 
-        title={`${product.name} | GEO® Motor India`}
-        description={`${product.desc} Engineered with ${product.specs.find(s => s.label === "Winding")?.value || 'premium'} winding and covered under a ${product.warranty} warranty.`}
-        slug={`/products/${seriesSlug}/${productId}`}
-      />
-      {/* Premium layout UI components go here */}
-    </>
-  );
-}
 
 export default function ProductDetail() {
     const { seriesSlug, productId } = useParams()
@@ -36,6 +14,7 @@ export default function ProductDetail() {
     const series = productSeries.find(s => s.slug === seriesSlug)
     const product = series?.products.find(p => p.id === productId)
 
+    // Fallback UI if product or series slug does not resolve properly
     if (!series || !product) {
         return (
             <div style={{ textAlign: 'center', padding: '80px 24px' }}>
@@ -47,8 +26,18 @@ export default function ProductDetail() {
         )
     }
 
+    // Safely extract winding spec for dynamic metadata generation
+    const windingType = product.specs?.find(s => s.label === "Winding")?.value || 'premium';
+
     return (
         <div className="detail-page">
+            {/* Dynamic SEO Meta Tag Injector optimized for Vercel crawling */}
+            <SEO 
+                title={`${product.name} | ${companyInfo.brand} Motor India`}
+                description={`${product.desc} Engineered with ${windingType} winding and backed by a ${product.warranty || 'heavy-duty'} warranty.`}
+                slug={`/products/${seriesSlug}/${productId}`}
+            />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">
@@ -66,21 +55,24 @@ export default function ProductDetail() {
                         <FiArrowLeft /> Back
                     </button>
 
-                    <motion.div className="detail-content"
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-
-                        {/* Image */}
+                    <motion.div 
+                        className="detail-content"
+                        initial={{ opacity: 0, y: 20 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 0.4 }}
+                    >
+                        {/* Image Frame */}
                         <div className="detail-img-frame">
                             <img src={product.image} alt={`GEO ${product.name} — ${series.name}`} />
                         </div>
 
-                        {/* Info */}
+                        {/* Info Block */}
                         <div className="detail-info">
                             <div className="badge badge-green" style={{ marginBottom: '12px' }}>{series.name}</div>
                             <h2 className="detail-product-name">{product.name}</h2>
                             <p className="detail-desc">{product.desc}</p>
 
-                            {/* Why Choose */}
+                            {/* Why Choose Section */}
                             {product.whyChoose && (
                                 <div className="detail-why-choose">
                                     <h4 className="detail-why-title">Why Choose This Motor?</h4>
@@ -88,7 +80,7 @@ export default function ProductDetail() {
                                 </div>
                             )}
 
-                            {/* Specs Table */}
+                            {/* Technical Specs Table */}
                             {product.specs && product.specs.length > 0 && (
                                 <div className="specs-table">
                                     <h4 className="specs-title">Technical Specifications</h4>
@@ -108,17 +100,17 @@ export default function ProductDetail() {
                                 </div>
                             )}
 
-                            {/* B2B Direct Helpline CTAs */}
+                            {/* B2B Hotlines */}
                             <div className="detail-quick-contact-row">
                                 <a href={`tel:${companyInfo.directPhone}`} className="btn-direct-call" id="detail-quick-call">
-                                    <FiPhone /> Call Now: +91 9953316357
+                                    <FiPhone /> Call Now: {companyInfo.directPhone}
                                 </a>
                                 <a href={companyInfo.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-direct-whatsapp" id="detail-quick-whatsapp">
                                     <FaWhatsapp /> WhatsApp Support
                                 </a>
                             </div>
 
-                            {/* Dual CTA */}
+                            {/* Section Navigation Actions */}
                             <div className="detail-actions">
                                 <Link to="/contact" className="btn btn-primary" id="detail-enquire-btn">
                                     Request a Quote <FiArrowRight />
@@ -133,15 +125,20 @@ export default function ProductDetail() {
                         </div>
                     </motion.div>
 
-                    {/* Technical Highlights */}
+                    {/* Technical Highlights Feature Grid */}
                     {product.technicalHighlights && product.technicalHighlights.length > 0 && (
                         <div className="technical-highlights-section">
                             <h3 className="th-section-title">Technical Highlights</h3>
                             <div className="th-grid">
                                 {product.technicalHighlights.map((th, i) => (
-                                    <motion.div key={th.label} className="th-card"
-                                        initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: i * 0.08 }} viewport={{ once: true }}>
+                                    <motion.div 
+                                        key={th.label} 
+                                        className="th-card"
+                                        initial={{ opacity: 0, y: 16 }} 
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: i * 0.08 }} 
+                                        viewport={{ once: true }}
+                                    >
                                         <div className="th-icon">{th.icon}</div>
                                         <div>
                                             <h4 className="th-label">{th.label}</h4>
@@ -153,7 +150,7 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {/* Product Features Checklist */}
+                    {/* Quality Features Checklist */}
                     {product.features && product.features.length > 0 && (
                         <div className="product-features-section">
                             <h3 className="pf-title">Product Features</h3>
@@ -168,7 +165,7 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {/* Related products */}
+                    {/* Mapped Alternative Series Matrix */}
                     {series.products.length > 1 && (
                         <div className="related-section">
                             <h3 className="related-title">More from {series.name}</h3>
@@ -185,7 +182,7 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {/* Bottom CTA */}
+                    {/* Bottom Sticky Action Banner */}
                     <div className="detail-bottom-cta">
                         <div>
                             <h3>Ready to Order {product.name}?</h3>
@@ -199,6 +196,7 @@ export default function ProductDetail() {
                     </div>
                 </main>
 
+                {/* Sticky Right Sidebar Widget Wrapper */}
                 <aside className="detail-sidebar">
                     <EnquiryWidget productName={product.name} />
                 </aside>

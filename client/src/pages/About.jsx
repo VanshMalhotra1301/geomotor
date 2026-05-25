@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FiArrowRight, FiCheckCircle } from 'react-icons/fi'
 import { companyInfo } from '../data/products'
 import EnquiryWidget from '../components/EnquiryWidget'
+import SEO from '../components/SEO' // Imported the reusable SEO metadata engine
 import './About.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55 } } }
@@ -11,6 +12,13 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } }
 export default function About() {
     return (
         <div className="about-page">
+            {/* Dynamic SEO Injector customized for your Vercel production deployment */}
+            <SEO 
+                title={companyInfo.seoMeta?.aboutTitle || "About GEO Motor India — 30+ Years of Cooler Motor Manufacturing Excellence"}
+                description={companyInfo.seoMeta?.aboutDesc || "Founded in 1995 by Mr. Vijay Sikka, GEO Motor India is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment."}
+                slug="/about"
+            />
+
             {/* Banner */}
             <div className="page-banner">
                 <div className="container">

@@ -7,6 +7,7 @@ import { productSeries, companyInfo } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import MotorParameters from '../components/MotorParameters'
 import mainImg from '../data/main.png'
+import SEO from '../components/SEO' // Imported the reusable SEO module
 import './Home.css'
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
@@ -26,6 +27,13 @@ const iconMap = {
 export default function Home() {
     return (
         <div className="home">
+            {/* Dynamic SEO Injector for Homepage routing synchronizations */}
+            <SEO 
+                title={companyInfo.seoMeta?.homeTitle || "GEO Motor India — ISI-Certified Cooler Motor Manufacturer | Since 1995"}
+                description={companyInfo.seoMeta?.homeDesc || "GEO Motor India manufactures ISI-registered, ISO-certified cooler motors, exhaust fan motors, chimney motors, and metal blades. India's first H-Frame Capcan motor manufacturer. OEM solutions, bulk orders, pan-India supply."}
+                keywords={companyInfo.seoMeta?.homeKeywords || "cooler motor manufacturer, ISI certified cooler motor, cooler motor supplier India, industrial cooler motor, exhaust fan motor manufacturer, chimney motor supplier"}
+                slug=""
+            />
 
             {/* ── Hero ── */}
             <section className="hero">
