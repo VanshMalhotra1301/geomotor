@@ -440,9 +440,9 @@ export const productSeries = [
 ];
 
 export const companyInfo = {
-    name: "Geo Motor India",
-    brand: "GEO®",
-    tagline: "Gives Your Money Worth",
+    name: "Sikka and Sons",
+    brand: "SIKKA AND SONS",
+    tagline: "Powering Innovation with Precision",
     usp: "India's First Manufacturer of H Frame Capcan Cooler Motor",
     founded: 1995,
     iso: true,
@@ -464,11 +464,11 @@ export const companyInfo = {
         instagram: "https://www.instagram.com/geomotorindia?igsh=MTAxb3l5c2J4MzJqaA%3D%3D&utm_source=qr",
     },
 
-    about: "Mr. Vijay Sikka founded Geo Motor India in 1995 with an aim of manufacturing high quality and affordable coolers, cooler motors and cooler pumps as a substitute to costly products existing in the market.",
+    about: "Mr. Vijay Sikka founded Sikka and Sons in 1995 with an aim of manufacturing high quality and affordable coolers, cooler motors and cooler pumps as a substitute to costly products existing in the market.",
 
-    fullAbout: `Mr. Vijay Sikka founded Geo Motor India in 1995 with an aim of manufacturing high quality and affordable coolers, cooler motors and cooler pumps as a substitute to costly products existing in the market.
+    fullAbout: `Mr. Vijay Sikka founded Sikka and Sons in 1995 with an aim of manufacturing high quality and affordable coolers, cooler motors and cooler pumps as a substitute to costly products existing in the market.
 
-Geo Motor India is an ISO-certified company committed to quality, reliability, and excellence in manufacturing. The certification reflects its adherence to international standards and dedication to customer satisfaction.
+Sikka and Sons is an ISO-certified company committed to quality, reliability, and excellence in manufacturing. The certification reflects its adherence to international standards and dedication to customer satisfaction.
 
 Our founder comes with remarkable years of experience of working in the electrical industry in India.
 
@@ -480,11 +480,11 @@ In 2007, we got our exclusively produced motor registered with ISI under the bra
 
 We are continuously evolving ourselves with the growing technology. In 2014, we got our first fully functional stamping plant installed. In 2017, we got our hands on fully automatic Motor Cover & Blade Plant. Recently, in 2020, our first automatic Winding Machine T-200 Plant got installed in the company. With an aim to produce sustainable premium quality products, we always strive to connect & collaborate globally while building strong footprints of our brand.`,
 
-    mission: "To manufacture precision-engineered, ISI-certified cooler motors and components that deliver maximum value, reliability, and performance to every OEM partner, dealer, and end-user — establishing GEO® as India's most trusted industrial motor brand.",
+    mission: "To manufacture precision-engineered, ISI-certified cooler motors and components that deliver maximum value, reliability, and performance to every OEM partner, dealer, and end-user — establishing Sikka and Sons as India's most trusted industrial motor brand.",
 
     vision: "To become the benchmark manufacturer for cooler motor technology in India — leading through engineering innovation, manufacturing excellence, and an unwavering commitment to quality that empowers every cooler brand we supply.",
 
-    qualityPhilosophy: "At GEO Motor India, quality is not a department — it is the DNA of every process, every component, and every decision made on our factory floor. From raw material selection to final dispatch, each stage of production is governed by strict quality parameters aligned with IS:996-2009 and ISO 9001:2015 standards. We believe that a motor is only as good as the winding inside it — which is why we invest in the finest copper wire, precision-stamped laminations, and automated winding technology to ensure every GEO motor performs exactly as specified.",
+    qualityPhilosophy: "At Sikka and Sons, quality is not a department — it is the DNA of every process, every component, and every decision made on our factory floor. From raw material selection to final dispatch, each stage of production is governed by strict quality parameters aligned with IS:996-2009 and ISO 9001:2015 standards. We believe that a motor is only as good as the winding inside it — which is why we invest in the finest copper wire, precision-stamped laminations, and automated winding technology to ensure every motor performs exactly as specified.",
 
     manufacturingPhilosophy: "Three decades of manufacturing experience have shaped a philosophy that values precision over shortcuts, durability over cost-cutting, and consistency over compromise. Our investment in automated manufacturing — from the T-200 winding plant to the fully automatic blade stamping line — reflects our belief that human skill and machine precision together create the best industrial products. Every motor that leaves our facility at Bawana Industrial Area has been tested, inspected, and approved by our quality team before it reaches our partners.",
 
@@ -502,7 +502,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         {
             icon: "🏆",
             title: "ISI Registered Motors",
-            desc: "Every GEO motor carries the ISI mark under IS:996-2009 — the Bureau of Indian Standards' guarantee of quality, safety, and performance compliance.",
+            desc: "Every motor carries the ISI mark under IS:996-2009 — the Bureau of Indian Standards' guarantee of quality, safety, and performance compliance.",
         },
         {
             icon: "🌐",
@@ -517,7 +517,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         {
             icon: "⚡",
             title: "Energy-Efficient Engineering",
-            desc: "GEO motors are designed for maximum airflow per watt. Our optimized winding design reduces power consumption without sacrificing cooling performance.",
+            desc: "Our motors are designed for maximum airflow per watt. Our optimized winding design reduces power consumption without sacrificing cooling performance.",
         },
         {
             icon: "🔩",
@@ -532,7 +532,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
         {
             icon: "🤝",
             title: "Trusted OEM Partner",
-            desc: "India's leading cooler brands trust GEO for their motor supply. Our OEM engineering team supports custom specifications, from RPM to frame to winding type.",
+            desc: "India's leading cooler brands trust Sikka and Sons for their motor supply. Our OEM engineering team supports custom specifications, from RPM to frame to winding type.",
         },
         {
             icon: "📞",
@@ -543,7 +543,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
 
     manufacturing: {
         headline: "Precision Engineering. Advanced Manufacturing. Uncompromising Quality.",
-        intro: "GEO Motor India's manufacturing facility at DSSIIDC Industrial Complex, Bawana, New Delhi, represents three decades of progressive investment in industrial capability. Our production floor combines skilled craftsmanship with automated precision to deliver motors that perform consistently at scale.",
+        intro: "Sikka and Sons' manufacturing facility at DSSIIDC Industrial Complex, Bawana, New Delhi, represents three decades of progressive investment in industrial capability. Our production floor combines skilled craftsmanship with automated precision to deliver motors that perform consistently at scale.",
         pillars: [
             {
                 title: "Precision Stamping Plant",
@@ -588,13 +588,13 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
     ],
 
     dealerInfo: {
-        headline: "Become a GEO® Authorized Dealer",
+        headline: "Become a Sikka and Sons Authorized Dealer",
         subheadline: "Partner with India's Most Trusted Cooler Motor Brand",
-        intro: "GEO Motor India invites ambitious dealers, distributors, and business partners to join our growing nationwide network. With 30+ years of manufacturing credibility, ISI-registered products, and a proven OEM track record, GEO® is the partner that gives your business a competitive edge in the cooler motor market.",
+        intro: "Sikka and Sons invites ambitious dealers, distributors, and business partners to join our growing nationwide network. With 30+ years of manufacturing credibility, ISI-registered products, and a proven OEM track record, we are the partner that gives your business a competitive edge in the cooler motor market.",
         benefits: [
             {
                 title: "Established Brand Authority",
-                desc: "Sell products under GEO® — a brand that cooler OEMs, industrial buyers, and retail customers actively seek out for quality and reliability.",
+                desc: "Sell products under Sikka and Sons — a brand that cooler OEMs, industrial buyers, and retail customers actively seek out for quality and reliability.",
                 icon: "🏆",
             },
             {
@@ -639,8 +639,8 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
     },
 
     milestones: [
-        { year: 1995, event: "Geo Motor India founded by Mr. Vijay Sikka" },
-        { year: 2007, event: "ISI registration of GEO® brand cooler motors under brand name \"GEO\"" },
+        { year: 1995, event: "Sikka and Sons founded by Mr. Vijay Sikka" },
+        { year: 2007, event: "ISI registration of cooler motors under brand name \"GEO\"" },
         { year: 2008, event: "Full focus on ISI-registered cooler motors — 12W, 18W, 92W, 152W" },
         { year: 2014, event: "First fully functional stamping plant installed" },
         { year: 2017, event: "Fully automatic Motor Cover & Blade Plant acquired" },
@@ -675,7 +675,7 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
     ],
 
     oem: {
-        intro: "GEO Motor India is a premier OEM engineering partner for India's leading cooler and appliance manufacturers. We develop custom motor solutions tailored exactly to your product requirements — from RPM and frame dimensions to winding specification and blade matching. Our automated production lines handle large-volume orders with absolute consistency, making GEO the OEM partner you can rely on for your entire production season.",
+        intro: "Sikka and Sons is a premier OEM engineering partner for India's leading cooler and appliance manufacturers. We develop custom motor solutions tailored exactly to your product requirements — from RPM and frame dimensions to winding specification and blade matching. Our automated production lines handle large-volume orders with absolute consistency, making us the OEM partner you can rely on for your entire production season.",
         whyPartner: [
             { title: "ISI-Certified OEM Supply", desc: "Every motor we supply carries the ISI mark — giving your end product the regulatory compliance and market credibility it needs." },
             { title: "Bulk Production Capacity", desc: "Our T-200 winding plant and stamping line process 10,000+ unit runs with consistent quality — ready for your peak season demands." },
@@ -701,27 +701,27 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
     },
 
     certifications: [
-        { name: "ISI Certification", standard: "IS:996-2009", body: "Bureau of Indian Standards", desc: "All GEO cooler motors are ISI-marked under IS:996-2009 — the national standard for single-phase AC motors. This certification guarantees that every motor meets defined performance, safety, and quality benchmarks validated by India's apex standards body." },
+        { name: "ISI Certification", standard: "IS:996-2009", body: "Bureau of Indian Standards", desc: "All Sikka and Sons cooler motors are ISI-marked under IS:996-2009 — the national standard for single-phase AC motors. This certification guarantees that every motor meets defined performance, safety, and quality benchmarks validated by India's apex standards body." },
         { name: "ISO Certification", standard: "ISO 9001:2015", body: "Quality Management System", desc: "Our manufacturing processes comply with ISO 9001:2015, ensuring consistent product quality and customer satisfaction. The ISO certification reflects our systematic approach to quality management, continuous improvement, and process control across all production stages." },
         { name: "GSTIN Registration", standard: "07AUQPK9142D1ZF", body: "Government of India", desc: "Registered under India's Goods and Services Tax framework with GSTIN 07AUQPK9142D1ZF — ensuring fully transparent, compliant, and audit-ready business transactions for all our OEM partners, dealers, and corporate buyers." },
-        { name: "UDYAM Registration", standard: "UDYAM-DL-06-0116986", body: "Ministry of MSME, Govt. of India", desc: "Officially registered MSME unit under the Udyam scheme of the Ministry of Micro, Small and Medium Enterprises. This registration validates GEO Motor India as a legitimate, government-recognized manufacturing enterprise eligible for MSME benefits and schemes." },
+        { name: "UDYAM Registration", standard: "UDYAM-DL-06-0116986", body: "Ministry of MSME, Govt. of India", desc: "Officially registered MSME unit under the Udyam scheme of the Ministry of Micro, Small and Medium Enterprises. This registration validates Sikka and Sons as a legitimate, government-recognized manufacturing enterprise eligible for MSME benefits and schemes." },
     ],
 
     faq: [
-        { q: "What products does GEO Motor India manufacture?", a: "We manufacture ISI-registered cooler motors (Commercial, Industrial, Tent), Exhaust Fan 996 Motors, Chimney Motors, Mini Tank Water Pumps, and Metal Blades in various sizes. All products are manufactured at our Bawana Industrial Area facility in New Delhi." },
+        { q: "What products does Sikka and Sons manufacture?", a: "We manufacture ISI-registered cooler motors (Commercial, Industrial, Tent), Exhaust Fan 996 Motors, Chimney Motors, Mini Tank Water Pumps, and Metal Blades in various sizes. All products are manufactured at our Bawana Industrial Area facility in New Delhi." },
         { q: "Do you provide OEM solutions?", a: "Yes. OEM manufacturing is our core business. We engineer custom motors for leading cooler brands — custom RPM, frame, blade matching, shaft dimensions, and winding type. Our team handles the complete process from requirement briefing to prototype testing to bulk production." },
         { q: "Are your motors ISI certified?", a: "Yes. All GEO motors are ISI-marked under IS:996-2009 (Bureau of Indian Standards), and our facility is ISO 9001:2015 certified. These certifications validate our commitment to quality, safety, and consistent manufacturing standards." },
         { q: "What wattages do you manufacture?", a: "We produce 12W, 18W, 92W, and 152W ISI-registered cooler motors. Custom wattages are available for OEM partners — our engineering team will advise the optimal specification based on your cooler's cooling requirement and blade size." },
         { q: "What industries do you serve?", a: "Cooler manufacturers, industrial cooling companies, tent cooler suppliers, kitchen chimney brands, OEM appliance brands, and industrial distributors. We also supply dealers, hardware stores, and electric shops through our nationwide dealer network." },
         { q: "Do you support bulk orders?", a: "Absolutely. Our automated T-200 winding plant and stamping lines support bulk production runs of 10,000+ units with consistent quality and reliable delivery timelines. Contact us with your volume requirement for a dedicated production schedule." },
         { q: "What is your manufacturing facility?", a: "Our factory is located at F-43, DSSIIDC Industrial Complex, Pocket-F, Sector-5, Bawana Industrial Area, Delhi. The facility includes a T-200 automatic winding plant, fully functional stamping plant, and a fully automatic Motor Cover & Blade Plant." },
-        { q: "How can I become a GEO dealer or distributor?", a: "Call our toll-free number 1800 571 6999 or email info@geomotorindia.com to discuss dealership terms, territory availability, and partnership requirements. We welcome applications from established electrical, hardware, and cooler parts businesses." },
-        { q: "Do GEO motors come with copper winding?", a: "Yes. GEO motors are available in both copper and aluminium winding options. Copper winding offers superior conductivity, better thermal performance, and longer motor life. Our engineering team will recommend the optimal winding choice based on your duty cycle and budget requirements." },
+        { q: "How can I become a Sikka and Sons dealer or distributor?", a: "Call our toll-free number 1800 571 6999 or email info@geomotorindia.com to discuss dealership terms, territory availability, and partnership requirements. We welcome applications from established electrical, hardware, and cooler parts businesses." },
+        { q: "Do your motors come with copper winding?", a: "Yes. Our motors are available in both copper and aluminium winding options. Copper winding offers superior conductivity, better thermal performance, and longer motor life. Our engineering team will recommend the optimal winding choice based on your duty cycle and budget requirements." },
         { q: "What RPM options are available in your cooler motors?", a: "Our commercial cooler motors are available at 900 RPM, 1400 RPM, and 2800 RPM. Industrial motors run at 1400 and 2800 RPM. For OEM requirements, we can engineer custom RPM configurations to match your specific blade and airflow specifications." },
-        { q: "What is the power consumption of your motors?", a: "GEO motors are engineered for energy efficiency. Our commercial range covers 12W, 18W, 92W, and 152W — delivering maximum airflow per watt consumed. Our ISI registration ensures all motors meet the energy efficiency benchmarks defined in IS:996-2009." },
+        { q: "What is the power consumption of your motors?", a: "Our motors are engineered for energy efficiency. The commercial range covers 12W, 18W, 92W, and 152W — delivering maximum airflow per watt consumed. Our ISI registration ensures all motors meet the energy efficiency benchmarks defined in IS:996-2009." },
         { q: "Do you provide after-sale technical support?", a: "Yes. Our toll-free helpline — 1800 571 6999 — provides technical support for all product queries, installation guidance, and troubleshooting. You can also reach our team at info@geomotorindia.com for detailed technical assistance." },
         { q: "How long is the warranty on GEO motors?", a: "GEO commercial and industrial cooler motors carry a 12-month warranty against manufacturing defects. Mini tank water pumps carry a 6-month warranty. Warranty coverage is subject to normal use conditions and proper installation as per product guidelines." },
-        { q: "Do you export your products?", a: "GEO Motor India is focused on serving the Indian market with our full product range. We are open to export enquiries from international buyers — please contact our commercial team at info@geomotorindia.com to discuss export requirements and capabilities." },
+        { q: "Do you export your products?", a: "Sikka and Sons is focused on serving the Indian market with our full product range. We are open to export enquiries from international buyers — please contact our commercial team at info@geomotorindia.com to discuss export requirements and capabilities." },
         { q: "What is the difference between H-Frame and E-Frame motors?", a: "H-Frame motors use a rigid H-shaped structural frame that provides superior structural integrity, precise shaft alignment, and excellent heat dissipation — preferred for premium cooler brands. E-Frame motors use an economical E-shaped design that delivers strong performance at a more competitive price point — ideal for high-volume OEM production." },
         { q: "Can I request product specifications and technical data sheets?", a: "Yes. Detailed technical specifications and data sheets are available for all GEO product series. Contact our team at info@geomotorindia.com or call 1800 571 6999 to request documentation for your specific product requirement." },
     ],
@@ -748,17 +748,17 @@ We are continuously evolving ourselves with the growing technology. In 2014, we 
     },
 
     seoMeta: {
-        homeTitle: "GEO Motor India — ISI-Certified Cooler Motor Manufacturer | Since 1995",
-        homeDesc: "GEO Motor India manufactures ISI-registered, ISO-certified cooler motors, exhaust fan motors, chimney motors, and metal blades. India's first H-Frame Capcan motor manufacturer. OEM solutions, bulk orders, pan-India supply.",
-        productsTitle: "Cooler Motor Products — GEO Motor India | Commercial, Industrial & OEM Motors",
-        productsDesc: "Browse GEO's complete range of ISI-certified cooler motors: Commercial H-Frame & E-Frame motors, Industrial Aluminium Shell motors, Exhaust Fan 996 models, Chimney motors, Mini Tank pumps, and Metal Blades.",
-        aboutTitle: "About GEO Motor India — 30+ Years of Cooler Motor Manufacturing Excellence",
-        aboutDesc: "Founded in 1995 by Mr. Vijay Sikka, GEO Motor India is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment.",
-        oemTitle: "OEM Motor Manufacturing Solutions — GEO Motor India",
-        oemDesc: "Custom OEM motor engineering for India's leading cooler brands. GEO Motor India offers custom RPM, frame, winding, and blade solutions. ISI-certified OEM supply with bulk production capability.",
-        dealerTitle: "Become a GEO® Dealer — Join India's Trusted Cooler Motor Network",
-        dealerDesc: "Partner with GEO Motor India as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today.",
-        contactTitle: "Contact GEO Motor India — Motor Enquiries, OEM & Dealer Partnerships",
-        contactDesc: "Contact GEO Motor India for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com",
+        homeTitle: "Sikka and Sons — ISI-Certified Cooler Motor Manufacturer | Since 1995",
+        homeDesc: "Sikka and Sons manufactures ISI-registered, ISO-certified cooler motors, exhaust fan motors, chimney motors, and metal blades. India's first H-Frame Capcan motor manufacturer. OEM solutions, bulk orders, pan-India supply.",
+        productsTitle: "Cooler Motor Products — Sikka and Sons | Commercial, Industrial & OEM Motors",
+        productsDesc: "Browse Sikka and Sons' complete range of ISI-certified cooler motors: Commercial H-Frame & E-Frame motors, Industrial Aluminium Shell motors, Exhaust Fan 996 models, Chimney motors, Mini Tank pumps, and Metal Blades.",
+        aboutTitle: "About Sikka and Sons — 30+ Years of Cooler Motor Manufacturing Excellence",
+        aboutDesc: "Founded in 1995 by Mr. Vijay Sikka, Sikka and Sons is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment.",
+        oemTitle: "OEM Motor Manufacturing Solutions — Sikka and Sons",
+        oemDesc: "Custom OEM motor engineering for India's leading cooler brands. Sikka and Sons offers custom RPM, frame, winding, and blade solutions. ISI-certified OEM supply with bulk production capability.",
+        dealerTitle: "Become a Sikka and Sons Dealer — Join India's Trusted Cooler Motor Network",
+        dealerDesc: "Partner with Sikka and Sons as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today.",
+        contactTitle: "Contact Sikka and Sons — Motor Enquiries, OEM & Dealer Partnerships",
+        contactDesc: "Contact Sikka and Sons for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com",
     },
 };

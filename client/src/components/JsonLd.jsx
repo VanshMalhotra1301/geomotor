@@ -61,11 +61,11 @@ export function buildProductSchema(product, series) {
     description: product.desc,
     brand: {
       '@type': 'Brand',
-      name: 'GEO Motor India',
+      name: 'Sikka and Sons',
     },
     manufacturer: {
       '@type': 'Organization',
-      name: 'Geo Motor India',
+      name: 'Sikka and Sons',
       url: BASE_URL,
     },
     category: series?.name || 'Cooler Motors',
@@ -76,7 +76,7 @@ export function buildProductSchema(product, series) {
       priceCurrency: 'INR',
       seller: {
         '@type': 'Organization',
-        name: 'Geo Motor India',
+        name: 'Sikka and Sons',
       },
     },
   };
@@ -91,7 +91,7 @@ export function buildServiceSchema({ name, description, url }) {
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'Organization',
-      name: 'Geo Motor India',
+      name: 'Sikka and Sons',
       url: BASE_URL,
     },
     areaServed: {

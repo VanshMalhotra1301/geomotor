@@ -8,19 +8,21 @@
     margin: 0 auto 48px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .faq-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
     border-radius: var(--radius);
     overflow: hidden;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: var(--shadow-luxury);
 }
 
 .faq-item.open {
-    border-color: rgba(46, 204, 113, 0.3);
+    border-color: var(--border);
+    box-shadow: var(--shadow-hover);
 }
 
 .faq-question {
@@ -31,9 +33,9 @@
     gap: 16px;
     padding: 20px 24px;
     font-family: var(--font-head);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--charcoal);
     background: none;
     border: none;
     cursor: pointer;
@@ -41,7 +43,7 @@
 }
 
 .faq-chevron {
-    color: var(--green);
+    color: var(--gold);
     font-size: 18px;
     flex-shrink: 0;
     transition: transform 0.3s;
@@ -57,32 +59,33 @@
 
 .faq-answer p {
     padding: 0 24px 20px;
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
 .faq-cta {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    background: var(--card-bg);
+    background: var(--pearl);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 40px 32px;
+    padding: 44px 32px;
 }
 
 .faq-cta-text h3 {
-    font-size: 22px;
-    color: var(--white);
+    font-size: 24px;
+    color: var(--charcoal);
     margin-bottom: 10px;
-    font-weight: 700;
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .faq-cta-text p {
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 28px;
 }
 
@@ -91,4 +94,4 @@
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-}
+}

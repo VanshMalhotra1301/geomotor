@@ -1,26 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ─── CSS Variables ─────────────────────────────────────────── */
+/* ─── CSS Variables — Luxury Light Theme ─────────────────────── */
 :root {
-  --green: #2ecc71;
-  --green-dark: #27ae60;
-  --green-light: #a8f0c6;
-  --red: #c0392b;
-  --dark: #0d0d0d;
-  --dark-2: #141414;
-  --dark-3: #1e1e1e;
-  --card-bg: #171717;
-  --border: rgba(255, 255, 255, 0.07);
-  --text: #f0f0f0;
-  --text-muted: #9a9a9a;
-  --white: #ffffff;
-  --font-head: 'Outfit', sans-serif;
+  /* Gold Palette */
+  --gold: #C9A84C;
+  --gold-light: #E2C97E;
+  --gold-dark: #A07830;
+  --gold-pale: #F5E6C0;
+  --gold-glow: rgba(201, 168, 76, 0.18);
+
+  /* Neutral Cream Palette */
+  --cream: #FFFDF7;
+  --pearl: #F7F2E8;
+  --ivory: #EDE8DC;
+  --warm-white: #FFFFFF;
+  --linen: #F0EAD8;
+
+  /* Text */
+  --charcoal: #1E1A14;
+  --text: #2C2820;
+  --text-muted: #7A7060;
+  --text-light: #AEA898;
+
+  /* Borders & Shadows */
+  --border: rgba(201, 168, 76, 0.22);
+  --border-soft: rgba(201, 168, 76, 0.12);
+  --border-strong: rgba(201, 168, 76, 0.45);
+  --shadow-luxury: 0 4px 32px rgba(30, 20, 10, 0.08);
+  --shadow-card: 0 8px 40px rgba(30, 20, 10, 0.10);
+  --shadow-hover: 0 16px 60px rgba(201, 168, 76, 0.18);
+
+  /* Aliases for legacy compat */
+  --green: var(--gold);
+  --green-dark: var(--gold-dark);
+  --green-light: var(--gold-pale);
+  --dark: var(--cream);
+  --dark-2: var(--pearl);
+  --dark-3: var(--ivory);
+  --card-bg: var(--warm-white);
+  --white: var(--warm-white);
+  --text-muted: #7A7060;
+
+  /* Typography */
+  --font-head: 'Cormorant Garamond', 'Georgia', serif;
   --font-body: 'Inter', sans-serif;
+
+  /* Motion */
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-glow: 0 0 30px rgba(46, 204, 113, 0.15);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --radius: 12px;
-  --radius-lg: 20px;
+
+  /* Radius */
+  --radius: 10px;
+  --radius-lg: 18px;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -38,9 +68,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--dark);
+  background: var(--cream);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -79,8 +109,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-head);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--charcoal);
 }
 
 /* ─── Layout Utilities ───────────────────────────────────────── */
@@ -91,11 +122,11 @@ h6 {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 88px 0;
 }
 
 .section-sm {
-  padding: 48px 0;
+  padding: 52px 0;
 }
 
 /* ─── Buttons ────────────────────────────────────────────────── */
@@ -103,137 +134,130 @@ h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-family: var(--font-head);
+  padding: 13px 30px;
+  border-radius: 6px;
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
 }
 
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.1);
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.btn:hover::after {
-  opacity: 1;
-}
-
 .btn-primary {
-  background: var(--green);
-  color: var(--dark);
+  background: var(--gold);
+  color: var(--warm-white);
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 2px 16px rgba(201, 168, 76, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--green-dark);
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(46, 204, 113, 0.4);
+  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.38);
 }
 
 .btn-outline {
-  border: 2px solid var(--green);
-  color: var(--green);
+  border: 1.5px solid var(--gold);
+  color: var(--gold-dark);
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: var(--green);
-  color: var(--dark);
+  background: var(--gold);
+  color: var(--warm-white);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
 }
 
 .btn-dark {
-  background: var(--dark-3);
+  background: var(--ivory);
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
 }
 
 .btn-dark:hover {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--gold);
+  color: var(--gold-dark);
+  background: var(--pearl);
+  transform: translateY(-2px);
 }
 
 /* ─── Section Headings ───────────────────────────────────────── */
 .section-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 12px;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-family: var(--font-body);
 }
 
 .section-title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  color: var(--white);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 600;
+  color: var(--charcoal);
   margin-bottom: 16px;
+  font-family: var(--font-head);
+  font-style: italic;
 }
 
 .section-title span {
-  color: var(--green);
+  color: var(--gold-dark);
+  font-style: normal;
 }
 
 .section-desc {
-  font-size: 16px;
+  font-size: 15.5px;
   color: var(--text-muted);
-  max-width: 600px;
-  line-height: 1.8;
+  max-width: 620px;
+  line-height: 1.85;
 }
 
 /* ─── Image Placeholder ──────────────────────────────────────── */
 .img-placeholder {
   width: 100%;
-  background: linear-gradient(135deg, var(--dark-3) 0%, #222 100%);
-  border: 2px dashed rgba(46, 204, 113, 0.3);
+  background: linear-gradient(135deg, var(--pearl) 0%, var(--ivory) 100%);
+  border: 1.5px dashed var(--border);
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: rgba(46, 204, 113, 0.5);
-  font-family: var(--font-head);
+  color: var(--gold);
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
-.img-placeholder svg {
-  width: 36px;
-  height: 36px;
-  opacity: 0.5;
-}
-
 /* ─── Scrollbar ──────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--dark);
+  background: var(--pearl);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--dark-3);
+  background: var(--gold-pale);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--green-dark);
+  background: var(--gold);
 }
 
 /* ─── Page Banner ────────────────────────────────────────────── */
 .page-banner {
-  background: linear-gradient(135deg, var(--dark-2) 0%, #0a1f10 100%);
+  background: linear-gradient(135deg, var(--pearl) 0%, var(--ivory) 100%);
   border-bottom: 1px solid var(--border);
-  padding: 64px 0 48px;
+  padding: 72px 0 52px;
   position: relative;
   overflow: hidden;
 }
@@ -241,22 +265,25 @@ h6 {
 .page-banner::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(46, 204, 113, 0.08) 0%, transparent 70%);
+  top: -30%;
+  right: -5%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .page-banner h1 {
-  font-size: clamp(32px, 5vw, 56px);
-  color: var(--white);
+  font-size: clamp(32px, 5vw, 58px);
+  color: var(--charcoal);
   margin-bottom: 12px;
+  font-family: var(--font-head);
+  font-weight: 600;
 }
 
 .page-banner h1 span {
-  color: var(--green);
+  color: var(--gold-dark);
+  font-style: italic;
 }
 
 .page-banner-sub {
@@ -270,11 +297,12 @@ h6 {
   gap: 8px;
   font-size: 13px;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .page-banner-breadcrumb span {
-  color: var(--green);
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* ─── Form Inputs ────────────────────────────────────────────── */
@@ -291,8 +319,8 @@ h6 {
 }
 
 .form-input {
-  background: var(--dark-3);
-  border: 1px solid var(--border);
+  background: var(--warm-white);
+  border: 1.5px solid var(--border);
   border-radius: 8px;
   padding: 12px 16px;
   color: var(--text);
@@ -303,12 +331,12 @@ h6 {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
 }
 
 .form-input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-light);
 }
 
 textarea.form-input {
@@ -318,17 +346,18 @@ textarea.form-input {
 
 /* ─── Card ───────────────────────────────────────────────────── */
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  background: var(--warm-white);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition);
+  box-shadow: var(--shadow-luxury);
 }
 
 .card:hover {
-  border-color: rgba(46, 204, 113, 0.3);
+  border-color: var(--border);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+  box-shadow: var(--shadow-hover);
 }
 
 /* ─── Divider ────────────────────────────────────────────────── */
@@ -343,17 +372,17 @@ textarea.form-input {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 100px;
   font-size: 12px;
   font-weight: 600;
-  font-family: var(--font-head);
+  font-family: var(--font-body);
 }
 
 .badge-green {
-  background: rgba(46, 204, 113, 0.12);
-  color: var(--green);
-  border: 1px solid rgba(46, 204, 113, 0.3);
+  background: rgba(201, 168, 76, 0.12);
+  color: var(--gold-dark);
+  border: 1px solid var(--border);
 }
 
 /* ─── Grid ───────────────────────────────────────────────────── */
@@ -394,13 +423,13 @@ textarea.form-input {
   }
 
   .section {
-    padding: 56px 0;
+    padding: 60px 0;
   }
 }
 
 /* ─── Glassmorphism Panel ────────────────────────────────────── */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 253, 247, 0.8);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -442,7 +471,28 @@ textarea.form-input {
 }
 
 .shimmer {
-  background: linear-gradient(90deg, var(--dark-3) 25%, var(--dark-2) 50%, var(--dark-3) 75%);
+  background: linear-gradient(90deg, var(--pearl) 25%, var(--ivory) 50%, var(--pearl) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ─── Gold Ornament Divider ──────────────────────────────────── */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.ornament-divider span {
+  color: var(--gold);
+  font-size: 18px;
 }

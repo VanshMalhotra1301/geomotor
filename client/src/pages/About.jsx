@@ -15,8 +15,8 @@ export default function About() {
         <div className="about-page">
             {/* Dynamic SEO Injector customized for your Vercel production deployment */}
             <SEO 
-                title={companyInfo.seoMeta?.aboutTitle || "About GEO Motor India — 30+ Years of Cooler Motor Manufacturing Excellence"}
-                description={companyInfo.seoMeta?.aboutDesc || "Founded in 1995 by Mr. Vijay Sikka, GEO Motor India is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment."}
+                title={companyInfo.seoMeta?.aboutTitle || "About Sikka and Sons — 30+ Years of Cooler Motor Manufacturing Excellence"}
+                description={companyInfo.seoMeta?.aboutDesc || "Founded in 1995 by Mr. Vijay Sikka, Sikka and Sons is an ISO-certified, ISI-registered cooler motor manufacturer based in Delhi. Learn about our manufacturing journey, milestones, and engineering commitment."}
                 slug="/about"
             />
             <JsonLd data={buildBreadcrumbSchema([
@@ -81,7 +81,7 @@ export default function About() {
                         <h2 className="about-section-head">Leadership & Founders</h2>
                         <div className="leadership-grid">
                             {[
-                                { name: "Mr. Vijay Sikka", role: "Founder & CEO", desc: "Founded GEO Motor India in 1995 with a vision to provide high-quality, affordable cooler motors as alternatives to expensive market offerings. His decades of experience in India's electrical industry established the technical foundation of the GEO brand." },
+                                { name: "Mr. Vijay Sikka", role: "Founder & CEO", desc: "Founded Sikka and Sons in 1995 with a vision to provide high-quality, affordable cooler motors as alternatives to expensive market offerings. His decades of experience in India's electrical industry established the technical foundation of our brand." },
                                 { name: "Mr. Gaurav Sikka", role: "Co-Founder — Technical Operations", desc: "Joined as co-founder, contributing deep expertise in technical operations management. Instrumental in driving GEO's manufacturing capability upgrades — from the stamping plant to the T-200 winding machine installation." },
                                 { name: "Mr. Rachin Sikka", role: "Co-Founder — Workforce & Operations", desc: "Joined as co-founder with a focus on workforce management and operational excellence. His contributions have been central to scaling GEO's production capacity while maintaining the consistent quality standards the brand is known for." },
                             ].map((leader, i) => (

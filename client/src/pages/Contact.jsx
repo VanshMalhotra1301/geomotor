@@ -47,8 +47,8 @@ ${form.message}
     return (
         <div className="contact-page">
             <SEO 
-                title={companyInfo.seoMeta?.contactTitle || "Contact GEO Motor India — Motor Enquiries, OEM & Dealer Partnerships"}
-                description={companyInfo.seoMeta?.contactDesc || "Contact GEO Motor India for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com"}
+                title={companyInfo.seoMeta?.contactTitle || "Contact Sikka and Sons — Motor Enquiries, OEM & Dealer Partnerships"}
+                description={companyInfo.seoMeta?.contactDesc || "Contact Sikka and Sons for product enquiries, OEM manufacturing partnerships, dealer applications, and bulk orders. Toll-free: 1800 571 6999 | info@geomotorindia.com"}
                 slug="/contact"
             />
             <JsonLd data={buildBreadcrumbSchema([

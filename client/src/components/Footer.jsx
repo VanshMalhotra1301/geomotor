@@ -2,23 +2,25 @@ import { Link } from 'react-router-dom'
 import { FaWhatsapp, FaFacebookF, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { FiCheckCircle } from 'react-icons/fi'
 import { productSeries, companyInfo } from '../data/products'
+import logoImg from '../data/new_logo.jpeg'
 import './Footer.css'
 
 export default function Footer() {
     return (
         <footer className="footer">
-            <div className="footer-glow" />
+            <div className="footer-gold-bar" />
             <div className="container footer-grid">
 
                 {/* Brand */}
                 <div className="footer-brand-col">
-                    <div className="footer-logo">
-                        <span className="logo-g">G</span><span className="logo-e">E</span><span className="logo-o">O</span><sup>®</sup>
-                    </div>
-                    <p className="footer-tagline">{companyInfo.tagline}</p>
+                    <Link to="/" className="footer-logo-link">
+                        <img src={logoImg} alt="Sikka and Sons Logo" style={{ height: '56px', width: '56px', objectFit: 'cover', borderRadius: '50%', border: '2px solid var(--gold)', marginBottom: '10px' }} />
+                    </Link>
+                    <div className="footer-brand-name">SIKKA AND SONS</div>
+                    <p className="footer-tagline">"{companyInfo.tagline}"</p>
                     <p className="footer-usp">{companyInfo.usp}</p>
                     <p className="footer-about">
-                        GEO® Motor India is an ISO 9001:2015 certified, ISI-registered cooler motor manufacturer based in New Delhi.
+                        Sikka and Sons is an ISO 9001:2015 certified, ISI-registered cooler motor manufacturer based in New Delhi.
                         Founded in 1995, we engineer precision motors trusted by India's leading cooler OEMs, industrial buyers, and dealers nationwide.
                     </p>
 
@@ -39,7 +41,7 @@ export default function Footer() {
                     </div>
 
                     <Link to="/dealers" className="footer-dealer-cta" id="footer-dealer-link">
-                        🤝 Become a GEO® Dealer →
+                        🤝 Become a Sikka and Sons Dealer →
                     </Link>
                 </div>
 
@@ -57,7 +59,7 @@ export default function Footer() {
                 <div className="footer-col">
                     <h4 className="footer-col-title">Quick Links</h4>
                     <ul className="footer-links" style={{ marginBottom: '24px' }}>
-                        <li><Link to="/about">About GEO Motor India</Link></li>
+                        <li><Link to="/about">About Sikka and Sons</Link></li>
                         <li><Link to="/oem-solutions">OEM Manufacturing Solutions</Link></li>
                         <li><Link to="/dealers">Dealer & Distributor Program</Link></li>
                         <li><Link to="/certifications">Certifications & Quality</Link></li>
@@ -78,7 +80,7 @@ export default function Footer() {
 
             <div className="footer-bottom">
                 <div className="container footer-bottom-inner">
-                    <p>© {new Date().getFullYear()} Geo Motor India. All rights reserved. | {companyInfo.usp} | ISI-Certified Cooler Motor Manufacturer Since 1995</p>
+                    <p>© {new Date().getFullYear()} Sikka and Sons. All rights reserved. | {companyInfo.usp} | ISI-Certified Cooler Motor Manufacturer Since 1995</p>
                     <p className="bottom-gstin">GSTIN: {companyInfo.gstin} | UDYAM: {companyInfo.udyam} | Made with ❤️ in India</p>
                 </div>
             </div>

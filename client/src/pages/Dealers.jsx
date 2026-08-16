@@ -14,7 +14,7 @@ export default function Dealers() {
         <div className="dealers-page">
             <SEO 
                 title={companyInfo.seoMeta?.dealerTitle || "Become a GEO® Dealer — Join India's Trusted Cooler Motor Network"}
-                description={companyInfo.seoMeta?.dealerDesc || "Partner with GEO Motor India as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today."}
+                description={companyInfo.seoMeta?.dealerDesc || "Partner with Sikka and Sons as an authorized dealer or distributor. Competitive margins, ISI-certified products, reliable supply, and dedicated dealer support. Apply for dealership today."}
                 slug="/dealers"
             />
             <JsonLd data={[

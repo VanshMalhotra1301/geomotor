@@ -8,16 +8,18 @@
 }
 
 .about-section-head {
-    font-size: 26px;
-    color: var(--white);
+    font-size: 28px;
+    color: var(--charcoal);
     margin-bottom: 24px;
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .about-para {
     font-size: 15px;
     color: var(--text-muted);
-    line-height: 1.85;
-    margin-bottom: 14px;
+    line-height: 1.9;
+    margin-bottom: 16px;
 }
 
 /* Timeline */
@@ -26,11 +28,13 @@
 }
 
 .timeline-title {
-    font-size: 20px;
-    color: var(--white);
+    font-size: 22px;
+    color: var(--charcoal);
     margin-bottom: 28px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .timeline-list {
@@ -48,7 +52,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--green), transparent);
+    background: linear-gradient(180deg, var(--gold), transparent);
 }
 
 .timeline-item {
@@ -63,16 +67,16 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: var(--green);
-    border: 3px solid var(--dark);
-    box-shadow: 0 0 0 2px var(--green);
+    background: var(--gold);
+    border: 3px solid var(--cream);
+    box-shadow: 0 0 0 2px var(--gold);
 }
 
 .timeline-year {
     font-family: var(--font-head);
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--green);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold-dark);
     display: block;
     margin-bottom: 4px;
 }
@@ -80,7 +84,7 @@
 .timeline-event {
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 /* Mission / Vision */
@@ -93,15 +97,18 @@
 }
 
 .about-mv-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
     border-radius: var(--radius-lg);
     padding: 28px 24px;
     transition: var(--transition);
+    box-shadow: var(--shadow-luxury);
 }
 
 .about-mv-card:hover {
-    border-color: rgba(46, 204, 113, 0.3);
+    border-color: var(--border);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .about-mv-icon {
@@ -112,15 +119,16 @@
 
 .about-mv-title {
     font-size: 18px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: var(--font-head);
 }
 
 .about-mv-text {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 /* Manufacturing Philosophy */
@@ -133,10 +141,10 @@
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    background: linear-gradient(135deg, rgba(46,204,113,0.06) 0%, rgba(46,204,113,0.02) 100%);
-    border: 1px solid rgba(46, 204, 113, 0.2);
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.07) 0%, rgba(201, 168, 76, 0.02) 100%);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 28px 28px;
+    padding: 28px;
     margin-bottom: 48px;
 }
 
@@ -149,15 +157,16 @@
 
 .about-quality-title {
     font-size: 18px;
-    color: var(--green);
+    color: var(--gold-dark);
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: var(--font-head);
 }
 
 .about-quality-text {
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
 /* Leadership */
@@ -176,42 +185,47 @@
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
     border-radius: var(--radius-lg);
     padding: 24px;
     transition: var(--transition);
+    box-shadow: var(--shadow-luxury);
 }
 
 .leader-card:hover {
-    border-color: rgba(46, 204, 113, 0.25);
+    border-color: var(--border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .leader-avatar {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: rgba(46, 204, 113, 0.15);
-    color: var(--green);
+    background: rgba(201, 168, 76, 0.12);
+    color: var(--gold-dark);
     font-family: var(--font-head);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    border: 1.5px solid var(--border);
 }
 
 .leader-name {
     font-size: 16px;
-    color: var(--white);
-    font-weight: 700;
+    color: var(--charcoal);
+    font-weight: 600;
     margin-bottom: 2px;
+    font-family: var(--font-head);
 }
 
 .leader-role {
     font-size: 12px;
-    color: var(--green);
+    color: var(--gold);
     font-weight: 600;
     letter-spacing: 0.5px;
     display: block;
@@ -221,7 +235,7 @@
 .leader-desc {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 /* About Stats Strip */
@@ -229,7 +243,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    background: var(--dark-2);
+    background: var(--pearl);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -254,8 +268,8 @@
 .about-stat-value {
     font-family: var(--font-head);
     font-size: 22px;
-    font-weight: 800;
-    color: var(--green);
+    font-weight: 700;
+    color: var(--gold-dark);
     display: block;
     margin-bottom: 4px;
 }
@@ -290,12 +304,12 @@
     gap: 6px;
     padding: 8px 18px;
     border-radius: 100px;
-    background: rgba(46, 204, 113, 0.1);
-    border: 1px solid rgba(46, 204, 113, 0.25);
-    color: var(--green);
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border);
+    color: var(--gold-dark);
     font-size: 13px;
     font-weight: 600;
-    font-family: var(--font-head);
+    font-family: var(--font-body);
 }
 
 .about-sidebar {

@@ -1,18 +1,18 @@
 .footer {
-    background: #080808;
+    background: var(--pearl);
     border-top: 1px solid var(--border);
     position: relative;
     overflow: hidden;
 }
 
-.footer-glow {
+.footer-gold-bar {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 600px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--green), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .footer-grid {
@@ -22,33 +22,32 @@
     padding: 64px 24px 48px;
 }
 
-.footer-logo {
-    font-family: var(--font-head);
-    font-size: 32px;
-    font-weight: 900;
-    display: flex;
-    align-items: baseline;
-    gap: 1px;
-    margin-bottom: 4px;
+.footer-logo-link {
+    display: inline-block;
 }
 
-.footer-logo sup {
-    font-size: 13px;
-    color: var(--text-muted);
+.footer-brand-name {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--charcoal);
+    margin-bottom: 4px;
 }
 
 .footer-tagline {
     font-style: italic;
-    color: var(--green);
+    color: var(--gold-dark);
     font-size: 13px;
     margin-bottom: 4px;
+    font-family: var(--font-head);
 }
 
 .footer-usp {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: rgba(46,204,113,0.7);
+    color: var(--gold);
     text-transform: uppercase;
     margin-bottom: 14px;
 }
@@ -56,8 +55,8 @@
 .footer-about {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 16px;
+    line-height: 1.85;
+    margin-bottom: 18px;
 }
 
 /* Certification Badges */
@@ -73,13 +72,13 @@
     align-items: center;
     gap: 4px;
     padding: 4px 10px;
-    background: rgba(46,204,113,0.08);
-    border: 1px solid rgba(46,204,113,0.2);
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border);
     border-radius: 100px;
     font-size: 10px;
     font-weight: 600;
-    color: var(--green);
-    font-family: var(--font-head);
+    color: var(--gold-dark);
+    font-family: var(--font-body);
 }
 
 /* Dealer CTA */
@@ -87,24 +86,26 @@
     display: inline-block;
     margin-top: 16px;
     padding: 10px 18px;
-    background: rgba(46,204,113,0.1);
-    border: 1px solid rgba(46,204,113,0.3);
-    border-radius: 8px;
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    border-radius: 6px;
     font-size: 13px;
-    font-weight: 700;
-    color: var(--green);
-    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--gold-dark);
+    font-family: var(--font-body);
     transition: var(--transition);
 }
 
 .footer-dealer-cta:hover {
-    background: var(--green);
-    color: var(--dark);
+    background: var(--gold);
+    color: var(--warm-white);
+    transform: translateY(-2px);
 }
 
 .footer-socials {
     display: flex;
     gap: 10px;
+    margin-bottom: 4px;
 }
 
 .footer-socials a {
@@ -116,23 +117,26 @@
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: 13px;
     transition: var(--transition);
+    background: var(--warm-white);
 }
 
 .footer-socials a:hover {
-    border-color: var(--green);
-    color: var(--green);
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-pale);
     transform: translateY(-2px);
 }
 
 .footer-col-title {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     color: var(--text-muted);
     margin-bottom: 20px;
+    font-family: var(--font-body);
 }
 
 .footer-links {
@@ -143,14 +147,14 @@
 
 .footer-links a,
 .footer-links li {
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--text-muted);
     transition: var(--transition);
     line-height: 1.4;
 }
 
 .footer-links a:hover {
-    color: var(--green);
+    color: var(--gold-dark);
     padding-left: 4px;
 }
 
@@ -169,7 +173,7 @@
 }
 
 .footer-contact-list li svg {
-    color: var(--green);
+    color: var(--gold);
     margin-top: 3px;
     flex-shrink: 0;
 }
@@ -180,12 +184,13 @@
 }
 
 .footer-contact-list a:hover {
-    color: var(--green);
+    color: var(--gold-dark);
 }
 
 .footer-bottom {
     border-top: 1px solid var(--border);
     padding: 20px 0;
+    background: var(--ivory);
 }
 
 .footer-bottom-inner {
@@ -202,7 +207,8 @@
 }
 
 .bottom-gstin {
-    font-family: var(--font-head);
+    font-family: var(--font-body);
+    font-size: 11px !important;
 }
 
 @media (max-width: 900px) {

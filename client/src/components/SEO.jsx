@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const BASE_URL = 'https://geomotorsindia.vercel.app';
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
-const SITE_NAME = 'GEO Motor India';
+const SITE_NAME = 'Sikka and Sons';
 
 /**
  * SEO — Full-featured meta tag injector for all pages.

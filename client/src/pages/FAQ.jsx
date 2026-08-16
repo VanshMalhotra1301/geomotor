@@ -16,8 +16,8 @@ export default function FAQ() {
     return (
         <div className="faq-page">
             <SEO
-                title="Frequently Asked Questions — GEO Motor India | Cooler Motors, OEM, Dealers"
-                description="Find answers to common questions about GEO Motor India's ISI-certified cooler motors, OEM manufacturing solutions, dealer partnerships, bulk orders, and product specifications."
+                title="Frequently Asked Questions — Sikka and Sons | Cooler Motors, OEM, Dealers"
+                description="Find answers to common questions about Sikka and Sons' ISI-certified cooler motors, OEM manufacturing solutions, dealer partnerships, bulk orders, and product specifications."
                 keywords="cooler motor FAQ, GEO motor questions, ISI cooler motor queries, OEM motor FAQ, cooler motor dealer FAQ"
                 slug="/faq"
             />
@@ -30,7 +30,7 @@ export default function FAQ() {
                 <div className="container">
                     <div className="page-banner-breadcrumb"><Link to="/">Home</Link> / <span>FAQ</span></div>
                     <h1>FREQUENTLY ASKED <span>QUESTIONS</span></h1>
-                    <p className="page-banner-sub">Everything you need to know about GEO Motor India — products, OEM, dealership, and more</p>
+                    <p className="page-banner-sub">Everything you need to know about Sikka and Sons — products, OEM, dealership, and more</p>
                 </div>
             </div>
 

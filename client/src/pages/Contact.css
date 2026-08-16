@@ -10,17 +10,19 @@
 
 /* Info Card */
 .contact-info-card {
-    background: #1a1a2e;
-    border: 1px solid rgba(46, 204, 113, 0.15);
+    background: var(--pearl);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 36px;
+    box-shadow: var(--shadow-luxury);
 }
 
 .cic-title {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--white);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--charcoal);
     margin-bottom: 4px;
+    font-family: var(--font-head);
 }
 
 .cic-list {
@@ -36,26 +38,26 @@
     gap: 14px;
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 .cic-icon {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: rgba(46, 204, 113, 0.1);
-    border: 1px solid rgba(46, 204, 113, 0.2);
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--green);
+    color: var(--gold);
     flex-shrink: 0;
     margin-top: 2px;
 }
 
 .cic-list strong {
     display: block;
-    color: var(--white);
+    color: var(--charcoal);
     font-weight: 600;
     font-family: var(--font-head);
     font-size: 13px;
@@ -68,7 +70,7 @@
 }
 
 .cic-list a:hover {
-    color: var(--green);
+    color: var(--gold-dark);
 }
 
 .whatsapp-cta-link {
@@ -89,43 +91,52 @@
 }
 
 .cet-title {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    font-family: var(--font-body);
 }
 
 .cet-item {
     font-size: 13px;
     color: var(--text-muted);
-    padding: 5px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-soft);
+    transition: var(--transition);
 }
 
 .cet-item:last-child {
     border-bottom: none;
 }
 
+.cet-item:hover {
+    color: var(--gold-dark);
+    padding-left: 4px;
+}
 
 /* Form Card */
 .contact-form-card {
-    background: var(--card-bg);
+    background: var(--warm-white);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 36px;
+    box-shadow: var(--shadow-luxury);
 }
 
 .cfc-title {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--white);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--charcoal);
     margin-bottom: 6px;
+    font-family: var(--font-head);
 }
 
 .cfc-title span {
-    color: var(--green);
+    color: var(--gold-dark);
+    font-style: italic;
 }
 
 .cfc-sub {
@@ -154,14 +165,14 @@
 }
 
 .captcha-box {
-    background: var(--dark-3);
-    border: 1px solid var(--border);
+    background: var(--pearl);
+    border: 1.5px solid var(--border);
     border-radius: 8px;
     padding: 12px 20px;
     font-family: var(--font-head);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    color: var(--green);
+    color: var(--gold-dark);
     letter-spacing: 3px;
     flex-shrink: 0;
 }
@@ -172,13 +183,21 @@
 
 .cf-success {
     font-size: 13px;
-    color: var(--green);
+    color: #2e7d32;
     font-weight: 600;
+    background: rgba(46, 125, 50, 0.08);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(46, 125, 50, 0.2);
 }
 
 .cf-error {
     font-size: 13px;
-    color: #e74c3c;
+    color: #c62828;
+    background: rgba(198, 40, 40, 0.06);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(198, 40, 40, 0.2);
 }
 
 .cf-submit {

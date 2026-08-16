@@ -30,8 +30,8 @@ export default function Home() {
         <div className="home">
             {/* Dynamic SEO Injector for Homepage routing synchronizations */}
             <SEO 
-                title={companyInfo.seoMeta?.homeTitle || "GEO Motor India — ISI-Certified Cooler Motor Manufacturer | Since 1995"}
-                description={companyInfo.seoMeta?.homeDesc || "GEO Motor India manufactures ISI-registered, ISO-certified cooler motors, exhaust fan motors, chimney motors, and metal blades. India's first H-Frame Capcan motor manufacturer. OEM solutions, bulk orders, pan-India supply."}
+                title={companyInfo.seoMeta?.homeTitle || "Sikka and Sons — ISI-Certified Cooler Motor Manufacturer | Since 1995"}
+                description={companyInfo.seoMeta?.homeDesc || "Sikka and Sons manufactures ISI-registered, ISO-certified cooler motors, exhaust fan motors, chimney motors, and metal blades. India's first H-Frame Capcan motor manufacturer. OEM solutions, bulk orders, pan-India supply."}
                 keywords={companyInfo.seoMeta?.homeKeywords || "cooler motor manufacturer, ISI certified cooler motor, cooler motor supplier India, industrial cooler motor, exhaust fan motor manufacturer, chimney motor supplier"}
                 slug=""
             />
@@ -54,7 +54,7 @@ export default function Home() {
                             India's Most <span>Trusted</span><br />Cooler Motor <span>Manufacturer</span>
                         </motion.h1>
                         <motion.p variants={fadeUp} className="hero-desc">
-                            GEO® Motor India has been precision-manufacturing ISI-registered cooler motors since 1995.
+                            Sikka and Sons has been precision-manufacturing ISI-registered cooler motors since 1995.
                             Engineered for India's climate — trusted by OEMs, dealers, and industrial buyers across the nation.
                         </motion.p>
                         <motion.div variants={fadeUp} className="hero-actions">
@@ -86,9 +86,9 @@ export default function Home() {
                     >
                         <div className="hero-img-frame">
                             <div className="hero-img-inner">
-                                <img src={mainImg} alt="GEO Motor India — ISI Certified Cooler Motors" />
+                                <img src={mainImg} alt="Sikka and Sons — ISI Certified Cooler Motors" />
                             </div>
-                            <div className="hero-img-badge">GEO® Since 1995</div>
+                            <div className="hero-img-badge">Since 1995</div>
                             <div className="hero-img-badge-2">India's First H-Frame Capcan Motor</div>
                         </div>
                     </motion.div>
@@ -113,15 +113,15 @@ export default function Home() {
                     <motion.div className="as-text" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
                         <motion.div variants={fadeUp} className="section-label">Who We Are</motion.div>
                         <motion.h2 variants={fadeUp} className="section-title">
-                            Powering India With <span>GEO®</span> Precision
+                            Powering India With <span>Precision</span>
                         </motion.h2>
                         <motion.p variants={fadeUp} className="section-desc">
                             {companyInfo.about}
                         </motion.p>
                         <motion.p variants={fadeUp} className="section-desc" style={{ marginTop: '12px' }}>
-                            Geo Motor India is an ISO 9001:2015 certified company committed to quality, reliability, and excellence in manufacturing.
+                            Sikka and Sons is an ISO 9001:2015 certified company committed to quality, reliability, and excellence in manufacturing.
                             Since 2007, our motors carry the ISI mark under IS:996-2009 — a testament to our uncompromising engineering standards.
-                            {' '}<strong style={{ color: 'var(--green)' }}>{companyInfo.usp}.</strong>
+                            {' '}<strong style={{ color: 'var(--gold-dark)' }}>{companyInfo.usp}.</strong>
                         </motion.p>
                         <motion.div variants={fadeUp} style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                             <Link to="/about" className="btn btn-outline" id="about-story-btn">Our Story <FiArrowRight /></Link>
@@ -198,9 +198,9 @@ export default function Home() {
                 <div className="container">
                     <div className="section-header-centered">
                         <div className="section-label">Why Choose Us</div>
-                        <h2 className="section-title">The <span>GEO®</span> Advantage</h2>
+                        <h2 className="section-title">The <span>SIKKA</span> Advantage</h2>
                         <p className="section-desc" style={{ margin: '0 auto' }}>
-                            Thirty years of engineering discipline, government-verified certifications, and a nationwide supply network — here's why India's leading cooler brands choose GEO.
+                            Thirty years of engineering discipline, government-verified certifications, and a nationwide supply network — here's why India's leading cooler brands choose Sikka and Sons.
                         </p>
                     </div>
                     <div className="why-grid-8">
@@ -224,7 +224,7 @@ export default function Home() {
                         <div className="section-label">Industries Served</div>
                         <h2 className="section-title">Who We <span>Serve</span></h2>
                         <p className="section-desc" style={{ margin: '0 auto' }}>
-                            From cooler OEM manufacturers to industrial facility managers, GEO® motors power businesses across India's cooling industry.
+                            From cooler OEM manufacturers to industrial facility managers, our motors power businesses across India's cooling industry.
                         </p>
                     </div>
                     <div className="industries-grid">
@@ -247,7 +247,7 @@ export default function Home() {
                     <div className="section-label">Trusted By Industry</div>
                     <h2 className="section-title">What Our <span>Partners Say</span></h2>
                     <p className="section-desc" style={{ margin: '0 auto' }}>
-                        OEM manufacturers, industrial distributors, and dealer partners across India share their GEO® experience.
+                        OEM manufacturers, industrial distributors, and dealer partners across India share their Sikka and Sons experience.
                     </p>
                 </div>
                 <div className="marquee-wrapper">
@@ -305,7 +305,7 @@ export default function Home() {
                 <div className="container dealer-strip-inner">
                     <div className="dealer-strip-icon">🤝</div>
                     <div className="dealer-strip-text">
-                        <h2>Grow Your Business with <span>GEO®</span></h2>
+                        <h2>Grow Your Business with <span>Sikka and Sons</span></h2>
                         <p>Join our nationwide dealer and distributor network. Competitive margins, ISI-certified products, reliable supply, and full business support.</p>
                     </div>
                     <div className="dealer-strip-actions">
@@ -323,7 +323,7 @@ export default function Home() {
             <section className="cta-strip">
                 <div className="container cta-inner">
                     <div className="cta-text">
-                        <h2>Ready to Work With <span>GEO Motor India</span>?</h2>
+                        <h2>Ready to Work With <span>Sikka and Sons</span>?</h2>
                         <p>Get in touch for bulk enquiries, OEM partnerships, product specifications, or dealer applications.</p>
                     </div>
                     <div className="cta-actions">

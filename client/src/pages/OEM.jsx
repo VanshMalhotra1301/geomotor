@@ -14,8 +14,8 @@ export default function OEM() {
     return (
         <div className="oem-page">
             <SEO 
-                title={companyInfo.seoMeta?.oemTitle || "OEM Motor Manufacturing Solutions — GEO Motor India"}
-                description={companyInfo.seoMeta?.oemDesc || "Custom OEM motor engineering for India's leading cooler brands. GEO Motor India offers custom RPM, frame, winding, and blade solutions. ISI-certified OEM supply with bulk production capability."}
+                title={companyInfo.seoMeta?.oemTitle || "OEM Motor Manufacturing Solutions — Sikka and Sons"}
+                description={companyInfo.seoMeta?.oemDesc || "Custom OEM motor engineering for India's leading cooler brands. Sikka and Sons offers custom RPM, frame, winding, and blade solutions. ISI-certified OEM supply with bulk production capability."}
                 slug="/oem-solutions"
             />
             <JsonLd data={[

@@ -5,7 +5,7 @@ import {
     FaChevronDown, FaBars, FaTimes
 } from 'react-icons/fa'
 import { productSeries, companyInfo } from '../data/products'
-import logoImg from '../data/image.png'
+import logoImg from '../data/new_logo.jpeg'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -51,7 +51,7 @@ export default function Navbar() {
                         <a href={companyInfo.socials.twitter} target="_blank" rel="noreferrer" aria-label="Twitter"><FaTwitter /></a>
                         <a href={companyInfo.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
                     </div>
-                    <div className="topbar-brand">MFD BY :- <span>GEO MOTOR INDIA</span></div>
+                    <div className="topbar-brand">MFD BY :- <span>SIKKA AND SONS</span></div>
                 </div>
             </div>
 
@@ -59,9 +59,9 @@ export default function Navbar() {
             <div className="navbar-main">
                 <div className="container navbar-inner">
                     <Link to="/" className="navbar-logo">
-                        <img src={logoImg} alt="Geo Motor India Logo" style={{ height: '45px', objectFit: 'contain' }} />
+                        <img src={logoImg} alt="Sikka and Sons Logo" style={{ height: '52px', width: '52px', objectFit: 'cover', borderRadius: '50%', border: '2px solid var(--gold)' }} />
                         <div className="logo-text">
-                            <span className="logo-company">Geo Motor India</span>
+                            <span className="logo-company">SIKKA AND SONS</span>
                             <span className="logo-tagline">{companyInfo.tagline}</span>
                         </div>
                     </Link>

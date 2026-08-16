@@ -1,8 +1,9 @@
 .enquiry-widget {
-    background: var(--card-bg);
+    background: var(--warm-white);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 28px;
+    box-shadow: var(--shadow-luxury);
 }
 
 .ew-header {
@@ -11,13 +12,15 @@
 
 .ew-title {
     font-size: 22px;
-    font-weight: 800;
-    color: var(--white);
+    font-weight: 600;
+    color: var(--charcoal);
     margin-bottom: 4px;
+    font-family: var(--font-head);
 }
 
 .ew-title span {
-    color: var(--green);
+    color: var(--gold-dark);
+    font-style: italic;
 }
 
 .ew-sub {
@@ -44,13 +47,21 @@
 
 .ew-success {
     font-size: 13px;
-    color: var(--green);
+    color: #2e7d32;
     font-weight: 600;
+    background: rgba(46, 125, 50, 0.08);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(46, 125, 50, 0.2);
 }
 
 .ew-error {
     font-size: 13px;
-    color: #e74c3c;
+    color: #c62828;
+    background: rgba(198, 40, 40, 0.06);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(198, 40, 40, 0.2);
 }
 
 @media (max-width: 500px) {

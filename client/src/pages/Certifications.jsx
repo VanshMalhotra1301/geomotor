@@ -10,8 +10,8 @@ export default function Certifications() {
     return (
         <div className="cert-page">
             <SEO 
-                title="Certifications & Quality | GEO Motor India"
-                description="View GEO Motor India's manufacturing certifications including ISI (IS:996-2009), ISO 9001:2015, UDYAM MSME, and GSTIN verification."
+                title="Certifications & Quality | Sikka and Sons"
+                description="View Sikka and Sons' manufacturing certifications including ISI (IS:996-2009), ISO 9001:2015, UDYAM MSME, and GSTIN verification."
                 slug="/certifications"
             />
             <JsonLd data={buildBreadcrumbSchema([

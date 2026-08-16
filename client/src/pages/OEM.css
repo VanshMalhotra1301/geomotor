@@ -16,16 +16,18 @@
 .oem-intro-text {
     font-size: 16px;
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
     max-width: 720px;
 }
 
 .oem-section-head {
-    font-size: 22px;
-    color: var(--white);
+    font-size: 24px;
+    color: var(--charcoal);
     margin-bottom: 28px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .capabilities-grid {
@@ -35,10 +37,6 @@
 }
 
 /* Why Partner */
-.oem-why-partner {
-    /* section container */
-}
-
 .oem-why-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -49,19 +47,22 @@
     display: flex;
     gap: 14px;
     align-items: flex-start;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
     border-radius: var(--radius);
     padding: 20px;
     transition: var(--transition);
+    box-shadow: var(--shadow-luxury);
 }
 
 .oem-why-card:hover {
-    border-color: rgba(46, 204, 113, 0.3);
+    border-color: var(--border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .oem-why-icon {
-    color: var(--green);
+    color: var(--gold);
     font-size: 20px;
     flex-shrink: 0;
     margin-top: 2px;
@@ -69,15 +70,16 @@
 
 .oem-why-card h4 {
     font-size: 14px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 6px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: var(--font-head);
 }
 
 .oem-why-card p {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* Industries */
@@ -89,19 +91,20 @@
 
 .oem-industry-pill {
     padding: 8px 18px;
-    background: var(--dark-3);
-    border: 1px solid var(--border);
+    background: var(--pearl);
+    border: 1px solid var(--border-soft);
     border-radius: 100px;
     font-size: 13px;
     color: var(--text-muted);
-    font-family: var(--font-head);
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-weight: 500;
     transition: var(--transition);
 }
 
 .oem-industry-pill:hover {
-    border-color: rgba(46,204,113,0.3);
-    color: var(--green);
+    border-color: var(--gold);
+    color: var(--gold-dark);
+    background: var(--gold-pale);
 }
 
 /* MOQ Block */
@@ -110,7 +113,7 @@
     gap: 20px;
     align-items: flex-start;
     padding: 28px;
-    background: var(--dark-2);
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.02) 100%);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
 }
@@ -123,46 +126,51 @@
 
 .oem-moq-block h3 {
     font-size: 18px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: var(--font-head);
 }
 
 .oem-moq-block p {
     font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .cap-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
     border-radius: var(--radius-lg);
     padding: 24px;
     transition: var(--transition);
+    box-shadow: var(--shadow-luxury);
 }
 
 .cap-card:hover {
-    border-color: rgba(46, 204, 113, 0.3);
+    border-color: var(--border);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .cap-icon {
-    color: var(--green);
+    color: var(--gold);
     font-size: 22px;
     margin-bottom: 12px;
 }
 
 .cap-card h4 {
     font-size: 15px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 8px;
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .cap-card p {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .process-list {
@@ -180,7 +188,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--green), transparent);
+    background: linear-gradient(180deg, var(--gold), transparent);
 }
 
 .process-step {
@@ -196,32 +204,35 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--green);
-    color: var(--dark);
-    font-family: var(--font-head);
-    font-weight: 900;
+    background: var(--gold);
+    color: var(--warm-white);
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.35);
 }
 
 .process-content h4 {
     font-size: 16px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 6px;
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .process-content p {
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .oem-cta-bar {
-    background: linear-gradient(135deg, #0a1f10, #141414);
-    border: 1px solid rgba(46, 204, 113, 0.2);
+    background: linear-gradient(135deg, var(--pearl) 0%, var(--ivory) 100%);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 32px;
     display: flex;
@@ -233,8 +244,10 @@
 
 .oem-cta-bar h3 {
     font-size: 20px;
-    color: var(--white);
+    color: var(--charcoal);
     margin-bottom: 4px;
+    font-family: var(--font-head);
+    font-weight: 600;
 }
 
 .oem-cta-bar p {

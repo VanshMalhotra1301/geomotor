@@ -16,7 +16,7 @@ export default function Products() {
     return (
         <div className="products-page">
             <SEO
-                title={`${activeSeries.name} — GEO Motor India | ISI-Certified Cooler Motors`}
+                title={`${activeSeries.name} — Sikka and Sons | ISI-Certified Cooler Motors`}
                 description={activeSeries.description}
                 keywords={companyInfo.seoMeta?.productsKeywords || 'cooler motor products, ISI cooler motor, commercial cooler motor, industrial motor, exhaust fan motor'}
                 slug={`/products/${activeSeries.slug}`}
